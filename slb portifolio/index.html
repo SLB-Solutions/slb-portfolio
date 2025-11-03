@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ...existing code... -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Business Solution Private Limited</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-container container">
+      <!-- brand/logo removed as requested -->
+
+      <!-- hamburger for small screens (kept for accessibility) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <!-- centered navigation -->
+      <div class="nav-center" aria-hidden="false">
+        <ul id="primary-navigation" class="nav-links" role="menu" aria-hidden="false">
+          <li role="none"><a role="menuitem" href="index.html" class="active">Home</a></li>
+          <li role="none"><a role="menuitem" href="about.html">About</a></li>
+          <li role="none"><a role="menuitem" href="services.html">Services</a></li>
+          <li role="none"><a role="menuitem" href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </div>
+
+      <!-- no contact CTA / no brand on right -->
+    </div>
+  </nav>
+
+  <div class="hero" role="banner">
+    <div class="container">
+      <h1 class="hero-title">Welcome to SL Business Solution</h1>
+      <p class="hero-sub">Your partner in business growth and success.</p>
+      <div class="hero-actions"><a href="services.html" class="btn hero-btn">Explore Our Services</a></div>
+    </div>
+  </div>
+</header>
+
+<script>
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-navigation');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', ()=> {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.setAttribute('aria-hidden', String(expanded));
+    });
+  })();
+</script>
+<!-- ...existing code... -->
+    <main>
+         <section class="about-preview">
+            <div class="container card" style="padding:1.25rem; margin-top:1.5rem;">
+                <h2>About Us</h2>
+                <p class="lead">
+                    SLB SOLUTIONS is a global leader in Intelligent Document Processing (IDP). Its AI-powered platform automates digital document accessibility compliance,
+                    captures and extracts actionable insights from raw data, and transforms documents into any desired digital format. SLB SOLUTIONS consistently delivers
+                    high-quality solutions for publishing, financial services, government, public sector, nonprofits, and education. SL Business Solution Private Limited is
+                    dedicated to providing top-notch business solutions tailored to your needs. Headquartered in Hyderabad, India.
+                </p>
+                <div style="margin-top:1rem;">
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+       <!-- ...existing code... -->
+        <section class="services-preview">
+            <div class="container card" style="padding:1.25rem;">
+                <h2>Our Services</h2>
+                <p class="lead">Comprehensive services to help your business thrive — concise bullets for quick scanning.</p>
+
+                <ul style="margin-top:1rem; list-style: none; padding: 0; display:grid; gap:.8rem;">
+                    <li class="card" style="display:block;">
+                        <strong>End‑to‑End Publishing & Accessibility</strong>
+                        <p class="lead" style="margin:.4rem 0 0;">
+                            Document publishing workflows and accessibility (ADA / Section 508 / WCAG) for PDFs, Word, Excel and ePubs — delivery, remediation and compliance testing.
+                        </p>
+                        <a href="https://slbsolution.com" class="btn" style="margin-top:.6rem; display:inline-block;">Learn more</a>
+                    </li>
+
+                    <li class="card" style="display:block;">
+                        <strong>Development Services</strong>
+                        <p class="lead" style="margin:.4rem 0 0;">
+                            Application development, migration and full‑lifecycle engineering across Linux, Solaris, Windows, J2EE/Java, Oracle and MS‑SQL Server.
+                        </p>
+                        <a href="https://slbsolution.com" class="btn" style="margin-top:.6rem; display:inline-block;">Learn more</a>
+                    </li>
+
+                    <li class="card" style="display:block;">
+                        <strong>Professional / IT Services</strong>
+                        <p class="lead" style="margin:.4rem 0 0;">
+                            Integration, IT infrastructure management, media services, outsourcing, staffing and 24×7 global support.
+                        </p>
+                        <a href="https://slbsolution.com" class="btn" style="margin-top:.6rem; display:inline-block;">Learn more</a>
+                    </li>
+
+                    <li class="card" style="display:block;">
+                        <strong>Content Conversion & Enrichment</strong>
+                        <p class="lead" style="margin:.4rem 0 0;">
+                            XML / EPUB / JATS / SGML conversions, typesetting, and content enrichment for technical and educational books.
+                        </p>
+                        <a href="https://slbsolution.com" class="btn" style="margin-top:.6rem; display:inline-block;">Learn more</a>
+                    </li>
+
+                </ul>
+                <div style="margin-top:1rem;">
+
+                    <a href="services.html" class="btn">View full services page</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-preview container" style="padding:1.25rem; margin-top:1.5rem;">
+            <h2>Our Portfolio</h2>
+            <p class="lead" style="margin-top:.5rem;">
+                Check out our previous projects and see how we've helped our clients succeed.
+                Every project we craft tells a unique story of creativity and innovation. We turn ideas into stunning digital experiences that inspire and engage.
+                From sleek websites to dynamic user interfaces — our designs speak louder than words. Each pixel, color, and animation is carefully chosen to leave a lasting impression.
+                We love pushing boundaries to create something fresh, bold, and unforgettable. Our work blends creativity with technology to bring visions to life.
+                Behind every project is a passionate team obsessed with perfection. Scroll down and explore the magic we’ve built for our amazing clients.
+            </p>
+
+            <div style="margin-top:1rem;">
+                <a href="portfolio.html" class="btn">View Portfolio</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 SL Business Solution Private Limited. All rights reserved.</p>
+        <a href="assets/docs/SLB-Brochure.pdf" class="btn">Download Brochure</a>
+    </footer>
+</body>
+</html>

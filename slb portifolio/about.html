@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — SL Business Solution</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <main class="about-page">
+    <header class="about-hero" role="banner" aria-labelledby="about-heading">
+      <div class="container">
+        <h1 id="about-heading">About SL Business Solution Private Limited</h1>
+        <p class="hero-sub">We build intelligent document processing solutions — accessible, secure and future-ready — for publishing, government, finance and education.</p>
+        <div class="hero-cta">
+          <a class="btn" href="services.html">Our Services</a>
+          <a class="btn btn-ghost" href="assets/docs/SLB-Brochure.pdf" target="_blank" rel="noopener">Download Brochure</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="about container card" aria-labelledby="who-we-are">
+      <h2 id="who-we-are" class="section-title">Who we are</h2>
+      <p class="lead">SL Business Solution combines AI, engineering and domain expertise to automate document accessibility compliance, extract insights from unstructured content, and convert/ enrich content into modern publishing formats.</p>
+
+      <div class="info-grid">
+        <article class="feature">
+          <h3>Vision</h3>
+          <p>To be the trusted partner for organizations seeking reliable, accessible and scalable document & content services worldwide.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Mission</h3>
+          <p>Deliver compliant, high-quality conversions, remediation and software that unlocks the value of enterprise content.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Values</h3>
+          <p>Quality · Accessibility · Security · Customer-first delivery · Continuous improvement</p>
+        </article>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="stat-value">10+</div><div class="stat-label">Years</div></div>
+        <div class="stat"><div class="stat-value">120+</div><div class="stat-label">Clients</div></div>
+        <div class="stat"><div class="stat-value">250+</div><div class="stat-label">Projects</div></div>
+      </div>
+
+      <h2 class="section-title" id="team-heading">Team</h2>
+      <div class="team-grid" role="list" aria-labelledby="team-heading">
+        <figure class="member card" role="listitem">
+          <img src="assets/avatar-placeholder.png" alt="A. Kumar — Founder and CEO" />
+          <figcaption>
+            <strong class="name">A. Kumar</strong>
+            <div class="role">Founder & CEO</div>
+          </figcaption>
+        </figure>
+
+        <figure class="member card" role="listitem">
+          <img src="assets/avatar-placeholder.png" alt="S. Reddy — Head of Engineering" />
+          <figcaption>
+            <strong class="name">S. Reddy</strong>
+            <div class="role">Head — Engineering</div>
+          </figcaption>
+        </figure>
+
+        <figure class="member card" role="listitem">
+          <img src="assets/avatar-placeholder.png" alt="M. Rao — Head of Delivery" />
+          <figcaption>
+            <strong class="name">M. Rao</strong>
+            <div class="role">Head — Delivery</div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© <span id="year"></span> SL Business Solution Private Limited — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

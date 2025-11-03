@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — SL Business Solution</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <main class="portfolio-page">
+    <header class="portfolio-hero container" role="banner" aria-labelledby="portfolio-heading">
+      <h1 id="portfolio-heading">Selected Case Studies</h1>
+      <p class="lead">Real projects that showcase our expertise in publishing, accessibility, migration and end-to-end digital delivery.</p>
+    </header>
+
+    <section class="container projects-section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card card" id="project-a">
+          <div class="card-head">
+            <h3>Project A — Digital Publishing Conversion</h3>
+            <div class="project-badge">Publishing</div>
+          </div>
+          <p class="project-desc">
+            A global educational publisher asked us to convert 800+ legacy textbook PDFs into structured EPUB3 and XML.
+            We applied advanced typesetting, asset cleaning, metadata tagging and delivered WCAG 2.1 compliant accessible outputs.
+          </p>
+          <ul class="project-features">
+            <li>EPUB3 & XML conversion</li>
+            <li>Image clean-up & OCR QC</li>
+            <li>Metadata & accessibility tagging</li>
+          </ul>
+          <div class="project-actions">
+            <a class="btn case-cta" href="projects/project-a.html">View case study</a>
+          </div>
+        </article>
+
+        <article class="project-card card" id="project-b">
+          <div class="card-head">
+            <h3>Project B — Accessibility & Compliance Overhaul</h3>
+            <div class="project-badge">Accessibility</div>
+          </div>
+          <p class="project-desc">
+            For a major financial firm we remediated 5,000+ Word/PPT/PDF files for ADA / Section 508 compliance.
+            Work included automated tagging, manual QA passes and an ongoing monitoring dashboard.
+          </p>
+          <ul class="project-features">
+            <li>Bulk remediation pipeline</li>
+            <li>Automated + manual QA</li>
+            <li>Compliance monitoring dashboard</li>
+          </ul>
+          <div class="project-actions">
+            <a class="btn case-cta" href="projects/project-b.html">View case study</a>
+          </div>
+        </article>
+
+        <article class="project-card card" id="project-c">
+          <div class="card-head">
+            <h3>Project C — Application Migration & Integration</h3>
+            <div class="project-badge">Migration</div>
+          </div>
+          <p class="project-desc">
+            We migrated a government education department to a cloud CMS, integrated accessibility checks and document workflows,
+            redesigned front-end and delivered full QA for 24/7 availability with minimal disruption.
+          </p>
+          <ul class="project-features">
+            <li>Cloud CMS migration</li>
+            <li>Workflow & accessibility integration</li>
+            <li>End-to-end QA & performance tuning</li>
+          </ul>
+          <div class="project-actions">
+            <a class="btn case-cta" href="projects/project-c.html">View case study</a>
+          </div>
+        </article>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© <span id="year"></span> SL Business Solution Private Limited — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
