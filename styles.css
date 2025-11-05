@@ -1,4 +1,5 @@
- /* Classic professional styles for SLB Solutions */
+
+  /* Classic professional styles for SLB Solutions */
 
     /* Reset & base */
     *,
@@ -193,9 +194,9 @@
     .section { padding: 2.25rem 0; }
     .section-header h2 {
         margin: 0 0 0.35rem;
-        color: #0c2233;
+        color: hwb(200 95% 4%);
     }
-    .section-header p { margin: 0; color: var(--muted); }
+    .section-header p { margin: 0; color: #f3f5f6 ; }
 
     /* About / metrics */
     .about-grid {
@@ -221,6 +222,7 @@
     }
 
     /* Contact */
+    
     .contact-grid {
         display: grid;
         grid-template-columns: 1fr 320px;
@@ -236,7 +238,7 @@
         font-weight: 700;
         font-size: .95rem;
         margin-top: .65rem;
-        color: #0c2233; /* stronger, professional heading color */
+        color: oklab(11.486% -0.01211 -0.01186); /* stronger, professional heading color */
     }
 
     /* Inputs & textarea: subtle, professional borders and smooth focus */
@@ -437,8 +439,10 @@
     /* Small visual tweak for lists inside cards */
     .card ul { margin: 0.6rem 0 0 1.1rem; color: var(--muted); }
 
-     <!-- CSS of logo adjustment-->
-            
+   
+    /*========================================================*/
+     /* CSS of logo adjustment */
+    /*========================================================*/
                 /* Prefer height over width for the logo */
                 .brand img {
                     height: 48px;     /* adjust this value to increase/decrease logo height */
@@ -451,8 +455,27 @@
                     .brand img { height: 40px; }
                 }
 
-    /* Improved, professional alignment for solutions showcase */
+    /*========================================================*/
+      /* Distinct, classic background for the Services section */
+    /*========================================================*/
+    #services {
+        background: linear-gradient(180deg, #6b819b 0%, #5b7ba7 100%);
+        border-top: 1px solid rgba(16,24,32,0.04);
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
 
+    /* Keep spacing balanced on smaller screens */
+    @media (max-width: 880px) {
+        #services {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    /*========================================================*/
+    /* SOLUTIONS SECTION:- Improved, professional alignment for solutions showcase */
+    /*========================================================*/
         .solutions-showcase {
             background: linear-gradient(180deg, rgba(11,98,166,0.02), transparent 40%);
             padding: 2rem 0;
@@ -496,6 +519,7 @@
             align-items: flex-end;
             gap: .5rem;
             justify-content: center;
+    
         }
 
         .solutions-showcase .chips {
@@ -678,14 +702,160 @@
             .solutions-showcase .solution-title { justify-content: flex-start; gap: .5rem; }
         }
 
-     /* Ensure team avatars are consistent and text aligned */
+        /* Title: use flex to keep the badge right-aligned within the title area */
+        .solutions-showcase .solution-title {
+            margin: 0;
+            font-size: 1.02rem;
+            color: #0c2233;
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            justify-content: space-between;
+            line-height: 1.1;
+            width: 100%;
+        }
+        .solutions-showcase .badge {
+            display: inline-block;
+            background: rgba(11,98,166,0.08);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: .72rem;
+            padding: .18rem .45rem;
+            border-radius: 999px;
+            margin-left: 0.6rem;
+            flex-shrink: 0;
+        }
+
+        .solutions-showcase .solution-desc {
+            margin: .2rem 0 0 0;
+            color: var(--muted);
+            font-size: .95rem;
+        }
+
+        .solutions-showcase .solution-bullets {
+            margin: .6rem 0 0 1.1rem;
+            color: var(--muted);
+            font-size: .95rem;
+        }
+        .solutions-showcase .solution-bullets li {
+            margin-bottom: .35rem;
+            line-height: 1.25;
+        }
+
+        /* Actions aligned to the right and pinned to the bottom for consistent layout */
+        .solutions-showcase .solution-actions {
+            margin-top: auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .solutions-showcase .link-cta {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: .95rem;
+        }
+        .solutions-showcase .link-cta:hover,
+        .solutions-showcase .link-cta:focus {
+            text-decoration: underline;
+            outline: none;
+        }
+
+        /* Hide empty/placeholder cards (defensive) */
+        .solutions-showcase .solution-card:empty {
+            display: none;
+        }
+
+        .solutions-showcase .solution-card:focus {
+            outline: 3px solid rgba(11,98,166,0.12);
+            outline-offset: 2px;
+        }
+
+        /* Responsive: stack header content and center controls for small screens */
+        @media (max-width: 740px) {
+            .solutions-showcase .solutions-header {
+            grid-template-columns: 1fr;
+            align-items: center;
+            text-align: center;
+            }
+            .solutions-showcase .solutions-intro {
+            order: 2;
+            width: 100%;
+            }
+            .solutions-showcase .solutions-controls {
+            order: 1;
+            width: 100%;
+            align-items: center;
+            margin-bottom: .75rem;
+            }
+            .solutions-showcase .chips { justify-content: center; }
+            .solutions-showcase .solution-bullets { margin-left: 0.8rem; }
+            .solutions-showcase .solution-top { align-items: center; }
+            .solutions-showcase .solution-title { justify-content: flex-start; gap: .5rem; }
+        }
+    /*========================================================*/
+    /*ABOUT SECTION:-- Left image, right text layout for About section */
+    /*========================================================*/
+
+            .about-grid.two-column {
+                display: grid;
+                grid-template-columns: 420px 1fr;
+                gap: 2rem;
+                align-items: center;
+            }
+            .about-figure {
+                margin: 0;
+                display: block;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(16,24,32,0.04);
+                background: var(--card-bg);
+            }
+            .about-figure img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            /* Keep metrics stacked and aligned to the right column */
+            .about-metrics { display:flex; gap: 1rem; flex-direction: column; margin-top: 1rem; }
+            .about-metrics .metric strong { display:block; font-size: 1.35rem; color: var(--accent); }
+            .about-metrics .metric span { color: var(--muted); font-size: .95rem; }
+
+            /* Responsive: stack image above text on small screens */
+            @media (max-width: 880px) {
+                .about-grid.two-column {
+                    grid-template-columns: 1fr;
+                }
+                .about-figure { order: -1; }
+            }
+    /*========================================================*/
+    /* TEAM SECTION:-- Professional, clean team member cards */   
+      /* Add a subtle, professional background for the team section */
+    /*========================================================*/
+    #team {
+        background: linear-gradient(180deg, hsl(200, 13%, 95%) 0%, #b8d1e0 100%);
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Ensure section header remains readable and consistent */
+    #team .section-header h2 { color: #0c2233; }
+    #team .section-header p { color: var(--muted); }
+
+    /* Ensure team avatars are consistent and text aligned */
+                    /* Fix: make section header text visible on the default (light) background */
+                    #team .section-header h2 { margin: 0 0 0.35rem; color: #0c2233; }
+                    #team .section-header p { margin: 0; color: var(--muted); }
+
                     .team-grid { gap: 1rem; }
 
-                    /* Card-style team member with centered content */
+                    /* Card-style team member with full-width image and centered text */
                     .team-member {
                         display: flex;
                         flex-direction: column;
-                        align-items: center;
+                        align-items: stretch;
                         text-align: center;
                         gap: 0.5rem;
                         padding: 0.8rem;
@@ -695,12 +865,12 @@
                         box-shadow: var(--shadow);
                     }
 
-                    /* Make all images a fixed square, crop with object-fit for consistent look */
+                    /* Make images fill the card width and maintain a consistent height */
                     .team-member img {
-                        width: 128px;
-                        height: 128px;
+                        width: 100%;
+                        height: 220px;
                         object-fit: cover;
-                        border-radius: 12px;
+                        border-radius: 8px;
                         display: block;
                     }
 
@@ -708,7 +878,85 @@
                     .team-member h4 { margin: 0; font-size: 1rem; color: #0c2233; }
                     .team-member p { margin: 0; color: var(--muted); font-size: .95rem; }
 
-                    /* Slightly smaller avatars on narrow screens */
+                    /* Slightly smaller image height on narrow screens for better fit */
                     @media (max-width: 740px) {
-                        .team-member img { width: 96px; height: 96px; border-radius: 10px; }
+                        .team-member img { height: 160px; border-radius: 10px; }
                     }
+
+
+    /*========================================================*/
+    /* TESTIMONIALS SECTION:-- Enhanced testimonial cards for credibility */
+         /* Ensure the testimonials header is visible (override light/transparent defaults) */
+    /*========================================================*/
+    .section.testimonials .section-header h2 {
+        margin: 0 0 0.35rem;
+        color: #0c2233;
+        line-height: 1.12;
+    }
+
+    /* Keep any supporting paragraph text readable */
+    .section.testimonials .section-header p {
+        margin: 0;
+        color: var(--muted);
+    }
+
+/*========================================================*/
+    /* CONTACT SECTION */
+    /*========================================================*/
+ /* Add a subtle, on-brand background for the Contact section */
+    #contact {
+        background: linear-gradient(180deg, #edf0f3e7 0%, #edf0f3e7 50%, transparent 100%);
+        background-color: #899cb1; /* fallback for older browsers */
+        border-top: 1px solid rgba(16,24,32,0.03);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Keep contact columns readable on the new background */
+    #contact .contact-form,
+    #contact .contact-details {
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    /* Keep the details panel visually elevated for contrast */
+    #contact .contact-details {
+        background: var(--card-bg);
+        border: 1px solid rgba(16,24,32,0.04);
+        box-shadow: var(--shadow);
+    }
+   
+   
+    /* Fix: make the Contact section header text visible (overrides the generic .section-header p color) */
+    #contact .section-header h2 {
+        margin: 0 0 0.35rem;
+        color: #0c2233; /* clear, dark heading color */
+    }
+    #contact .section-header p {
+        margin: 0;
+        color: var(--muted); /* readable supporting text */
+    }
+
+
+ /*========================================================*/
+    /* SERVICES SECTION:-- Distinct, classic background for the Services section */
+    /*========================================================*/ 
+ /* services section style  for background image*/                 
+#services {
+        background: linear-gradient(180deg, #6b819b 0%, #5b7ba7 100%);
+        border-top: 1px solid rgba(16,24,32,0.04);
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    /* Keep spacing balanced on smaller screens */
+    @media (max-width: 880px) {
+        #services {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+
+    

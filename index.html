@@ -24,6 +24,7 @@
 <!--
     /* CSS Styles */
 -->
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
 
@@ -222,9 +223,9 @@
     .section { padding: 2.25rem 0; }
     .section-header h2 {
         margin: 0 0 0.35rem;
-        color: #0c2233;
+        color: hwb(200 95% 4%);
     }
-    .section-header p { margin: 0; color: var(--muted); }
+    .section-header p { margin: 0; color: #f3f5f6 ; }
 
     /* About / metrics */
     .about-grid {
@@ -250,6 +251,7 @@
     }
 
     /* Contact */
+    
     .contact-grid {
         display: grid;
         grid-template-columns: 1fr 320px;
@@ -265,7 +267,7 @@
         font-weight: 700;
         font-size: .95rem;
         margin-top: .65rem;
-        color: #0c2233; /* stronger, professional heading color */
+        color: oklab(11.486% -0.01211 -0.01186); /* stronger, professional heading color */
     }
 
     /* Inputs & textarea: subtle, professional borders and smooth focus */
@@ -523,8 +525,11 @@
         </div>
     </header>
 
-    <!-- Hero / Above the fold -->
+    <!-- ========================================= -->
+    <!-- Hero Section -->
+    <!-- ========================================= -->
 
+    
     <section id="hero" class="hero">
         <div class="container hero-inner">
             <div class="hero-content">
@@ -538,15 +543,35 @@
                 </div>
             </div>
             <div class="hero-media" aria-hidden="true">
-                <!-- Placeholder for hero illustration or screenshot -->
-                <img src="assets/images/hero-placeholder.svg" alt="" />
+                <!--  hero image -->
+                <img src="images/Hero.image.png" alt="transforming businesses with modern software and cloud technologies.”" />
             </div>
         </div>
     </section>
 
     <main id="main-content" role="main">
-        <!-- Services section -->
-        <section id="services" class="section services">
+
+    <!-- ========================================= -->
+     <!-- Services section -->
+    <!-- ========================================= -->
+    <style>
+    /* Distinct, classic background for the Services section */
+    #services {
+        background: linear-gradient(180deg, #6b819b 0%, #5b7ba7 100%);
+        border-top: 1px solid rgba(16,24,32,0.04);
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    /* Keep spacing balanced on smaller screens */
+    @media (max-width: 880px) {
+        #services {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+    </style>
+            <section id="services" class="section services">
             <div class="container">
                 <header class="section-header">
                     <h2>Our Services</h2>
@@ -605,8 +630,9 @@
             </div>
         </section>
 
-        <!-- Solutions / Industries -->
-
+    <!-- ========================================= -->
+        <!-- Solutions / Industries Section-->
+    <!-- ========================================= -->
        
         <style>
         /* Improved, professional alignment for solutions showcase */
@@ -654,6 +680,7 @@
             align-items: flex-end;
             gap: .5rem;
             justify-content: center;
+    
         }
 
         .solutions-showcase .chips {
@@ -841,9 +868,9 @@
             <div class="container">
                 <header id="solutions-intro-title" class="section-header solutions-header">
                     <div class="solutions-intro">
-                        <h2>Solutions & Industries — Strategic, Secure, Scalable</h2>
+                        <h2>Strategic and Secure Solutions for Growth.</h2>
                         <p class="solutions-lead">
-                           We build industry-focused platforms that minimize risk, speed up delivery, and drive measurable business value. Select a vertical to see our proven engineering in action.
+                          We build industry-focused platforms that reduce risk, accelerate delivery, and drive measurable business value
                         </p>
                     </div>
 
@@ -957,47 +984,101 @@
 
       <!-- Solutions / Industries  end -->  
 
+    <!-- ========================================= -->
+        <!-- About Section-->
+    <!-- ========================================= -->
+    <section id="about" class="section about">
+        <style>
+            /* Left image, right text layout for About section */
+            .about-grid.two-column {
+                display: grid;
+                grid-template-columns: 420px 1fr;
+                gap: 2rem;
+                align-items: center;
+            }
+            .about-figure {
+                margin: 0;
+                display: block;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(16,24,32,0.04);
+                background: var(--card-bg);
+            }
+            .about-figure img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            /* Keep metrics stacked and aligned to the right column */
+            .about-metrics { display:flex; gap: 1rem; flex-direction: column; margin-top: 1rem; }
+            .about-metrics .metric strong { display:block; font-size: 1.35rem; color: var(--accent); }
+            .about-metrics .metric span { color: var(--muted); font-size: .95rem; }
 
-        <!-- About -->
-        <section id="about" class="section about">
-            <div class="container">
-                <div class="about-grid">
-                    <div>
-                        <h2>About SLB Solutions</h2>
-                        <p>
-                            We are a team of engineers, designers and cloud specialists helping companies accelerate
-                            product delivery and run resilient platforms. Founded on engineering excellence and strong
-                            delivery practices.
-                        </p>
-                        <ul>
-                            <li>Established process: Discovery → Design → Build → Operate</li>
-                            <li>Strong emphasis on testing, observability and security</li>
-                            <li>Cross-functional teams with end-to-end ownership</li>
-                        </ul>
-                    </div>
+            /* Responsive: stack image above text on small screens */
+            @media (max-width: 880px) {
+                .about-grid.two-column {
+                    grid-template-columns: 1fr;
+                }
+                .about-figure { order: -1; }
+            }
+        </style>
 
-                    <div>
-                        <!-- Optional: timeline or company metrics -->
-                        <div class="metrics">
-                            <div class="metric">
-                                <strong>19+</strong>
-                                <span>Years combined leadership experience</span>
-                            </div>
-                            <div class="metric">
-                                <strong>100+</strong>
-                                <span>Projects delivered</span>
-                            </div>
-                            <div class="metric">
-                                <strong>50%</strong>
-                                <span>Average release cycle reduction for clients</span>
-                            </div>
+        <div class="container">
+            <div class="about-grid two-column">
+                <figure class="about-figure" aria-hidden="false">
+                    <img src="images/vert.about_image.png" alt="SLB Solutions team collaborating on a cloud architecture" />
+                </figure>
+
+                <div class="about-content">
+                    <h2>About SLB Solutions</h2>
+                    <p>
+                        We are a team of engineers, designers and cloud specialists helping companies accelerate
+                        product delivery and run resilient platforms. Founded on engineering excellence and strong
+                        delivery practices.
+                    </p>
+                    <ul>
+                        <li>Established process: Discovery → Design → Build → Operate</li>
+                        <li>Strong emphasis on testing, observability and security</li>
+                        <li>Cross-functional teams with end-to-end ownership</li>
+                    </ul>
+
+                    <div class="about-metrics">
+                        <div class="metric">
+                            <strong>19+</strong>
+                            <span>Years combined leadership experience</span>
+                        </div>
+                        <div class="metric">
+                            <strong>100+</strong>
+                            <span>Projects delivered</span>
+                        </div>
+                        <div class="metric">
+                            <strong>50%</strong>
+                            <span>Average release cycle reduction for clients</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <!-- ========================================= -->
         <!-- Team -->
+    <!-- ========================================= -->
+     <!--added background image style-->
+    <style>
+    /* Add a subtle, professional background for the team section */
+    #team {
+        background: linear-gradient(180deg, hsl(200, 13%, 95%) 0%, #b8d1e0 100%);
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Ensure section header remains readable and consistent */
+    #team .section-header h2 { color: #0c2233; }
+    #team .section-header p { color: var(--muted); }
+    </style>
         <section id="team" class="section team">
             <div class="container">
                 <header class="section-header">
@@ -1007,15 +1088,20 @@
 
                 <div class="grid team-grid">
                     <!-- Add real profile images under /assets/images/team/ -->
+
                     <style>
                     /* Ensure team avatars are consistent and text aligned */
+                    /* Fix: make section header text visible on the default (light) background */
+                    #team .section-header h2 { margin: 0 0 0.35rem; color: #0c2233; }
+                    #team .section-header p { margin: 0; color: var(--muted); }
+
                     .team-grid { gap: 1rem; }
 
-                    /* Card-style team member with centered content */
+                    /* Card-style team member with full-width image and centered text */
                     .team-member {
                         display: flex;
                         flex-direction: column;
-                        align-items: center;
+                        align-items: stretch;
                         text-align: center;
                         gap: 0.5rem;
                         padding: 0.8rem;
@@ -1025,12 +1111,12 @@
                         box-shadow: var(--shadow);
                     }
 
-                    /* Make all images a fixed square, crop with object-fit for consistent look */
+                    /* Make images fill the card width and maintain a consistent height */
                     .team-member img {
-                        width: 128px;
-                        height: 128px;
+                        width: 100%;
+                        height: 220px;
                         object-fit: cover;
-                        border-radius: 12px;
+                        border-radius: 8px;
                         display: block;
                     }
 
@@ -1038,9 +1124,9 @@
                     .team-member h4 { margin: 0; font-size: 1rem; color: #0c2233; }
                     .team-member p { margin: 0; color: var(--muted); font-size: .95rem; }
 
-                    /* Slightly smaller avatars on narrow screens */
+                    /* Slightly smaller image height on narrow screens for better fit */
                     @media (max-width: 740px) {
-                        .team-member img { width: 96px; height: 96px; border-radius: 10px; }
+                        .team-member img { height: 160px; border-radius: 10px; }
                     }
                     </style>
 
@@ -1066,8 +1152,23 @@
                 </div>
             </div>
         </section>
-
+    <!-- ========================================= -->
         <!-- Testimonials (optional) -->
+    <!-- ========================================= -->
+    <style>
+    /* Ensure the testimonials header is visible (override light/transparent defaults) */
+    .section.testimonials .section-header h2 {
+        margin: 0 0 0.35rem;
+        color: #0c2233;
+        line-height: 1.12;
+    }
+
+    /* Keep any supporting paragraph text readable */
+    .section.testimonials .section-header p {
+        margin: 0;
+        color: var(--muted);
+    }
+    </style>
         <section class="section testimonials">
             <div class="container">
                 <header class="section-header">
@@ -1088,7 +1189,45 @@
             </div>
         </section>
 
-        <!-- Contact -->
+     <!-- ========================================= -->   
+        <!-- Contact Section -->
+    <!-- ========================================= -->
+    <style>
+    /* Add a subtle, on-brand background for the Contact section */
+    #contact {
+        background: linear-gradient(180deg, #edf0f3e7 0%, #edf0f3e7 50%, transparent 100%);
+        background-color: #899cb1; /* fallback for older browsers */
+        border-top: 1px solid rgba(16,24,32,0.03);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Keep contact columns readable on the new background */
+    #contact .contact-form,
+    #contact .contact-details {
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    /* Keep the details panel visually elevated for contrast */
+    #contact .contact-details {
+        background: var(--card-bg);
+        border: 1px solid rgba(16,24,32,0.04);
+        box-shadow: var(--shadow);
+    }
+    </style>
+    <style>
+    /* Fix: make the Contact section header text visible (overrides the generic .section-header p color) */
+    #contact .section-header h2 {
+        margin: 0 0 0.35rem;
+        color: #0c2233; /* clear, dark heading color */
+    }
+    #contact .section-header p {
+        margin: 0;
+        color: var(--muted); /* readable supporting text */
+    }
+    </style>
         <section id="contact" class="section contact">
             <div class="container">
                 <header class="section-header">
@@ -1153,9 +1292,9 @@
             </div>
         </section>
     </main>
-
+    <!-- ========================================= -->
     <!-- Footer -->
-
+    <!-- ========================================= -->
     <footer class="site-footer" role="contentinfo">
         <div class="container footer-inner">
             <div class="footer-brand">
