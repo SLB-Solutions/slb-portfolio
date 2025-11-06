@@ -1,175 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLBusiness Solution - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SLBusiness Solution — Professional</title>
+  <meta name="description" content="SLBusiness Solution — Strategy, Digital, Marketing & Consulting">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root{
+      --accent:#004aad;
+      --accent-2:#003d8d;
+      --muted:#6b7280;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --radius:14px;
+      --max-width:1180px;
+      --shadow: 0 6px 24px rgba(12,15,20,0.08);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--bg),#ffffff);
+      color:#0b1220;
+      line-height:1.5;
+    }
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+    header{
+      position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(0,0,0,0.05);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--accent)}
+    .brand img{height:50px;width:auto;border-radius:4px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:inherit;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(0,74,173,0.1);color:var(--accent)}
+
+    .cta{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
+    .cta:hover{background:var(--accent-2)}
+
+    .hero{padding:80px 0;display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center}
+    .hero-left h1{font-size:38px;margin:0 0 12px;color:var(--accent)}
+    .hero-left p{color:var(--muted);margin:0 0 20px}
+    .hero-right img{width:100%;border-radius:12px;box-shadow:var(--shadow)}
+
+    .services{padding:60px 0}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:var(--shadow);transition:transform .22s ease}
+    .card:hover{transform:translateY(-8px)}
+    .card i{font-size:26px;color:var(--accent);margin-bottom:12px}
+    .card h3{margin:0 0 10px}
+    .card p{color:var(--muted)}
+
+    .portfolio{padding:60px 0;background:linear-gradient(180deg,#fbfdff,var(--bg))}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .thumb img{width:100%;height:220px;object-fit:cover;border-radius:10px;transition:transform .3s ease}
+    .thumb:hover img{transform:scale(1.05)}
+
+    .about{display:flex;gap:28px;align-items:center;padding:60px 0}
+    .about .text{flex:1}
+    .about .image img{width:100%;border-radius:12px;box-shadow:var(--shadow)}
+
+    .contact{padding:60px 0}
+    form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    input,textarea,select{padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.1);font-size:15px}
+    textarea{grid-column:1/-1;min-height:140px;resize:vertical}
+    .form-footer{display:flex;gap:12px;align-items:center}
+
+    footer{padding:40px 0;background:#071024;color:#dbeafe}
+    .footer-grid{display:grid;grid-template-columns:1fr 240px;gap:18px;align-items:start}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.05);color:inherit;margin-right:8px;text-decoration:none}
+
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .about{flex-direction:column}
+      form{grid-template-columns:1fr}
+    }
+    @media (max-width:680px){
+      nav ul{display:none}
+      .services-grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">SLBusiness Solution</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="logo1.jpg" alt="SLBusiness Solution Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+    <a class="cta" href="#contact">Get a Proposal</a>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to SLBusiness Solution</h1>
-            <p>Your Partner in Business Excellence</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </div>
-    </section>
+<main class="container">
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <h1>We Build Growth Systems for Ambitious Companies</h1>
+      <p>SLBusiness Solution delivers expert consulting, digital innovation, and business strategies to help your company succeed.</p>
+      <a class="cta" href="#services">Our Services</a>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80" alt="Business success image">
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Business Strategy</h3>
-                <p>Strategic planning and business development solutions</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Digital Solutions</h3>
-                <p>Custom software and digital transformation services</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-bullseye"></i>
-                <h3>Marketing</h3>
-                <p>Digital marketing and brand development</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-users"></i>
-                <h3>Consulting</h3>
-                <p>Expert business consulting and advisory services</p>
-            </div>
-        </div>
-    </section>
+  <section id="services" class="services">
+    <h2 style="text-align:center;margin-bottom:22px">Our Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <i class="fa-solid fa-rocket"></i>
+        <h3>Business Strategy</h3>
+        <p>Helping organizations achieve long-term success through customized business solutions.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Digital Products</h3>
+        <p>We create websites, apps, and automation systems that power digital growth.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-bullhorn"></i>
+        <h3>Marketing & Branding</h3>
+        <p>Boost your brand visibility with impactful campaigns and content strategies.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>SLBusiness Solution is a leading business consulting firm dedicated to helping companies achieve their full potential. With years of experience and a team of expert professionals, we deliver innovative solutions that drive growth and success.</p>
-            <div class="stats">
-                <div class="stat-item">
-                    <h3>200+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p>Years Experience</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="portfolio" class="portfolio">
+    <h2 style="text-align:center;margin-bottom:18px">Our Portfolio</h2>
+    <div class="gallery">
+      <div class="thumb"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Strategy project"></div>
+      <div class="thumb"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Marketing project"></div>
+      <div class="thumb"><img src="https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?auto=format&fit=crop&w=1200&q=80" alt="Technology project"></div>
+    </div>
+  </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <h2>Our Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300x200" alt="Project 1">
-                <div class="portfolio-overlay">
-                    <h3>Business Strategy Project</h3>
-                    <p>Strategic planning and execution</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300x200" alt="Project 2">
-                <div class="portfolio-overlay">
-                    <h3>Digital Transformation</h3>
-                    <p>Technology implementation</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300x200" alt="Project 3">
-                <div class="portfolio-overlay">
-                    <h3>Marketing Campaign</h3>
-                    <p>Brand development and marketing</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="about" class="about">
+    <div class="text">
+      <h2>About SLBusiness Solution</h2>
+      <p>SLBusiness Solution is your partner in building a stronger, smarter business. We specialize in delivering innovative strategies and modern technology solutions tailored to your goals.</p>
+      <ul>
+        <li>10+ years of consulting expertise</li>
+        <li>Over 200 completed projects</li>
+        <li>Flexible collaboration models</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80" alt="Team meeting image">
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-container">
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Subject">
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>123 Business Street, City, Country</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+1 234 567 890</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>contact@slbusiness.com</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="contact" class="contact">
+    <h2 style="text-align:center;margin-bottom:18px">Get in Touch</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="company" placeholder="Company (optional)">
+      <select name="budget">
+        <option value="">Budget Range</option>
+        <option>Under $5k</option>
+        <option>$5k–$20k</option>
+        <option>$20k+</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your project" required></textarea>
+      <div class="form-footer" style="grid-column:1/-1">
+        <button type="submit" class="cta">Send Message</button>
+      </div>
+    </form>
+  </section>
+</main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>SLBusiness Solution</h3>
-                <p>Your trusted partner in business success</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 style="margin:0 0 8px;color:#fff">SLBusiness Solution</h3>
+        <p>Empowering businesses with innovative technology and strategic insights.</p>
+      </div>
+      <div style="text-align:right">
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 SLBusiness Solution. All rights reserved.</p>
-        </div>
-    </footer>
+        <div style="font-size:13px;color:#9ec7ff">© 2025 SLBusiness Solution</div>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
