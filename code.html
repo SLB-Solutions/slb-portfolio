@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLB Solutions Portfolio</title>
+    <link rel="stylesheet" href="code.css"
+    <link href="https://fonts.googleapis.
+    com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-sphere"></div>
+            <div class="gradient-sphere second"></div>
+            <div class="gradient-sphere third"></div>
+        </div>
+
+        <!-- Header Section -->
+        <header class="main-header">
+            <div class="logo-container">
+                <div class="logo">
+                    <span class="logo-text">SLB</span>
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="brand-name">Solutions</div>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="glitch-text">Digital Innovation</h1>
+                <p class="hero-subtitle">Creating Tomorrow's Solutions Today</p>
+                <div class="cta-container">
+                    <a href="#projects" class="cta-button primary">View Projects</a>
+                    <a href="#contact" class="cta-button secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Digital Innovation">
+                <div class="image-overlay"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon"></div>
+                    <h3>Fast Development</h3>
+                    <p>Quick turnaround with quality code</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"></div>
+                    <h3>Precision Design</h3>
+                    <p>Pixel-perfect, responsive solutions</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"></div>
+                    <h3>Innovation</h3>
+                    <p>Cutting-edge technology integration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <h2 class="section-title">Our Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Tech Dashboard">
+                        <div class="project-overlay">
+                            <h3>Analytics Dashboard</h3>
+                            <p>Real-time data visualization</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80" alt="Mobile App">
+                        <div class="project-overlay">
+                            <h3>Mobile Banking</h3>
+                            <p>Secure financial platform</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="Team Collaboration">
+                        <div class="project-overlay">
+                            <h3>Team Platform</h3>
+                            <p>Collaborative workspace solution</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email Address</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        Send Message
+                        <div class="button-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2025 SLB Solutions. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Glitch text effect
+        const glitchText = document.querySelector('.glitch-text');
+        if (glitchText) {
+            setInterval(() => {
+                glitchText.classList.add('glitch');
+                setTimeout(() => {
+                    glitchText.classList.remove('glitch');
+                }, 200);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
