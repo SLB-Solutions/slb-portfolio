@@ -1,0 +1,913 @@
+
+<!-- HEADER SECTION -->
+<header class="w-full bg-white shadow-md sticky top-0 z-50">
+    <!-- command to run the tailwind css to check -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  <div class="container mx-auto flex items-center justify-between px-6 py-4 max-w-7xl">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center space-x-2" aria-label="SLB Solutions home">
+      <img 
+        src="images/SLB_Logo.png" 
+        alt="SLB Solutions logo" 
+        class="h-12 w-auto md:h-10 transition-all duration-300"
+      />
+    </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium" role="navigation" aria-label="Main Navigation">
+      <a href="#services" class="hover:text-blue-600 transition-colors duration-300">Services</a>
+      <a href="#solutions" class="hover:text-blue-600 transition-colors duration-300">Solutions</a>
+      <a href="#work" class="hover:text-blue-600 transition-colors duration-300">Work</a>
+      <a href="#about" class="hover:text-blue-600 transition-colors duration-300">About</a>
+      <a href="#team" class="hover:text-blue-600 transition-colors duration-300">Team</a>
+      <a href="#contact" class="hover:text-blue-600 transition-colors duration-300">Contact</a>
+    </nav>
+
+    <!-- CTA -->
+    <div class="hidden md:block">
+      <a 
+        href="#contact" 
+        class="bg-blue-600 text-white font-semibold px-5 py-2.5 rounded-full hover:bg-blue-700 shadow-md transition-all duration-300"
+      >
+        Get in touch
+      </a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button 
+      class="md:hidden flex items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      aria-controls="primary-menu"
+      aria-expanded="false"
+    >
+      <i class="fa fa-bars text-2xl"></i>
+      <span class="sr-only">Toggle menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="primary-menu" class="md:hidden bg-white border-t border-gray-100">
+    <ul class="flex flex-col items-center py-3 space-y-2 text-gray-700 font-medium">
+      <li><a href="#services" class="hover:text-blue-600 transition-colors duration-300">Services</a></li>
+      <li><a href="#solutions" class="hover:text-blue-600 transition-colors duration-300">Solutions</a></li>
+      <li><a href="#work" class="hover:text-blue-600 transition-colors duration-300">Work</a></li>
+      <li><a href="#about" class="hover:text-blue-600 transition-colors duration-300">About</a></li>
+      <li><a href="#team" class="hover:text-blue-600 transition-colors duration-300">Team</a></li>
+      <li><a href="#contact" class="hover:text-blue-600 transition-colors duration-300">Contact</a></li>
+      <li>
+        <a 
+          href="#contact" 
+          class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-300"
+        >
+          Get in touch
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!--========================-->
+<!-- Hero Section -->
+<!--========================-->
+
+<section id="hero" class="relative w-full bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+  <div class="container mx-auto px-6 py-16 flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl gap-10">
+
+    <!-- Hero Content -->
+    <div class="flex-1 text-center lg:text-left space-y-6 animate-fadeIn">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+        Transform Today. <span class="text-blue-600">Lead Tomorrow</span> — SLB Solutions
+      </h1>
+
+      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
+        We design, build and operate scalable software and cloud-native platforms that accelerate business outcomes.
+      </p>
+
+      <!-- Hero Actions -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+        <a href="#services" 
+          class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+          Our Services
+        </a>
+
+        <a href="#work" 
+          class="border-2 border-blue-600 text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
+          View Case Studies
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Media -->
+    <div class="flex-1 flex justify-center lg:justify-end">
+      <img 
+        src="images/Hero.image.png" 
+        alt="Transforming businesses with modern software and cloud technologies"
+        class="w-full max-w-md md:max-w-lg lg:max-w-xl object-contain animate-float"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Optional custom animations -->
+<style>
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out both;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+</style>
+
+<!-- ========================================= -->
+<!-- Services Section (Tailwind version) -->
+<!-- ========================================= -->
+<section
+  id="services"
+  class="relative bg-gradient-to-b from-slate-500 via-slate-600 to-slate-700 text-white py-16 md:py-20 border-t border-white/10"
+>
+  <div class="container mx-auto px-6 max-w-7xl">
+    <!-- Section Header -->
+    <header class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+        Our Services
+      </h2>
+      <p class="text-lg text-slate-200 max-w-2xl mx-auto">
+        End-to-end IT services tailored for enterprises: strategy, engineering, and operations.
+      </p>
+    </header>
+
+    <!-- Service Cards Grid -->
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card 1 -->
+      <article
+        class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa fa-cloud" aria-hidden="true"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">
+          Cloud & Platform Engineering
+        </h3>
+        <p class="text-slate-200 mb-4">
+          Cloud adoption, architecture, migration, multi-cloud strategy, managed platform services.
+        </p>
+        <ul class="list-disc list-inside text-slate-300 text-sm space-y-1">
+          <li>Cloud Architecture (AWS / Azure / GCP)</li>
+          <li>Platform as a Service & Kubernetes</li>
+          <li>Cost optimization & security</li>
+        </ul>
+      </article>
+
+      <!-- Card 2 -->
+      <article
+        class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa fa-code" aria-hidden="true"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">
+          Web & Software Development
+        </h3>
+        <p class="text-slate-200">
+          Custom web apps, APIs, microservices, enterprise portals, and system integrations.
+        </p>
+      </article>
+
+      <!-- Card 3 -->
+      <article
+        class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa fa-mobile-screen-button" aria-hidden="true"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">
+          Mobile & Cross-Platform Apps
+        </h3>
+        <p class="text-slate-200">
+          iOS / Android / Flutter / React Native — performant mobile solutions with CI/CD pipelines.
+        </p>
+      </article>
+
+      <!-- Card 4 -->
+      <article
+        class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa fa-gears" aria-hidden="true"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">
+          DevOps & Automation
+        </h3>
+        <p class="text-slate-200">
+          CI/CD, infrastructure as code, automated testing, and release engineering.
+        </p>
+      </article>
+
+      <!-- Card 5 -->
+      <article
+        class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa fa-paint-roller" aria-hidden="true"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">
+          Design & UX
+        </h3>
+        <p class="text-slate-200">
+          User-centered design, prototyping, design systems, and accessibility audits.
+        </p>
+      </article>
+
+      <!-- Card 6 -->
+      <article
+        class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">
+          Security & Compliance
+        </h3>
+        <p class="text-slate-200">
+          Application security, cloud security posture, threat modelling, and compliance readiness.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================================= -->
+<!-- Solutions / Industries Section (Tailwind) -->
+<!-- ========================================= -->
+
+<section id="solutions" class="py-16 bg-gradient-to-b from-blue-50/10 via-white to-transparent">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Header -->
+    <header class="grid md:grid-cols-2 gap-6 items-center mb-10">
+      
+      <!-- Intro -->
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
+          Strategic and Secure Solutions for Growth.
+        </h2>
+        <p class="text-slate-600">
+          We build industry-focused platforms that reduce risk, accelerate delivery, 
+          and drive measurable business value.
+        </p>
+      </div>
+      
+      <!-- Controls -->
+      <div class="flex flex-col md:items-end gap-2">
+        <span class="text-sm font-medium text-slate-500">Explore by industry</span>
+        <div class="flex flex-wrap gap-2 justify-start md:justify-end" role="toolbar">
+          <button class="filter-chip active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-chip" data-filter="finance">Finance</button>
+          <button class="filter-chip" data-filter="healthcare">Healthcare</button>
+          <button class="filter-chip" data-filter="retail">Retail</button>
+          <button class="filter-chip" data-filter="saas">SaaS</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Solutions Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+
+      <!-- Card 1: Finance -->
+      <article class="solution-card" data-industry="finance" role="listitem" tabindex="0">
+        <div class="flex gap-4 items-start">
+          <div class="solution-icon"><i class="fa fa-chart-line"></i></div>
+          <div>
+            <h3 class="solution-title">Financial Services Platforms <span class="badge">Compliance</span></h3>
+            <p class="solution-desc">
+              Secure, low-latency systems with auditability, reconciliation, and risk controls for regulated environments.
+            </p>
+          </div>
+        </div>
+        <ul class="solution-bullets">
+          <li>Real-time payments & reconciliation</li>
+          <li>PCI / SOC / audit readiness</li>
+          <li>High-throughput event-driven architecture</li>
+        </ul>
+        <div class="solution-actions">
+          <a href="#contact" class="link-cta">Talk to an expert →</a>
+        </div>
+      </article>
+
+      <!-- Card 2: Healthcare -->
+      <article class="solution-card" data-industry="healthcare" role="listitem" tabindex="0">
+        <div class="flex gap-4 items-start">
+          <div class="solution-icon"><i class="fa fa-hospital"></i></div>
+          <div>
+            <h3 class="solution-title">Healthcare & Patient Experience <span class="badge">HIPAA</span></h3>
+            <p class="solution-desc">
+              Interoperable platforms that protect patient data, support telehealth, and simplify clinical workflows.
+            </p>
+          </div>
+        </div>
+        <ul class="solution-bullets">
+          <li>Secure data exchange & FHIR integrations</li>
+          <li>Access controls and consent management</li>
+          <li>Resilient hosting with observability</li>
+        </ul>
+        <div class="solution-actions">
+          <a href="#contact" class="link-cta">Schedule a consultation →</a>
+        </div>
+      </article>
+
+      <!-- Card 3: Retail -->
+      <article class="solution-card" data-industry="retail" role="listitem" tabindex="0">
+        <div class="flex gap-4 items-start">
+          <div class="solution-icon"><i class="fa fa-store"></i></div>
+          <div>
+            <h3 class="solution-title">Retail & eCommerce <span class="badge">Omnichannel</span></h3>
+            <p class="solution-desc">
+              Scalable storefronts and headless commerce to deliver personalized experiences across channels.
+            </p>
+          </div>
+        </div>
+        <ul class="solution-bullets">
+          <li>Headless CMS & composable commerce</li>
+          <li>Personalization & analytics</li>
+          <li>Inventory & order orchestration</li>
+        </ul>
+        <div class="solution-actions">
+          <a href="#contact" class="link-cta">Start a project →</a>
+        </div>
+      </article>
+
+      <!-- Card 4: SaaS -->
+      <article class="solution-card" data-industry="saas" role="listitem" tabindex="0">
+        <div class="flex gap-4 items-start">
+          <div class="solution-icon"><i class="fa fa-cloud-arrow-up"></i></div>
+          <div>
+            <h3 class="solution-title">Enterprise SaaS & Platforms <span class="badge">Scalable</span></h3>
+            <p class="solution-desc">
+              Multi-tenant architectures, billing, telemetry, and secure onboarding to scale product-led businesses.
+            </p>
+          </div>
+        </div>
+        <div class="solution-actions mt-4">
+          <a href="#contact" class="link-cta">Discuss architecture →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Filter Script -->
+  <script>
+    const chips = document.querySelectorAll(".filter-chip");
+    const cards = document.querySelectorAll(".solution-card");
+
+    chips.forEach(chip => {
+      chip.addEventListener("click", () => {
+        chips.forEach(c => {
+          c.classList.remove("active");
+          c.setAttribute("aria-pressed", "false");
+        });
+        chip.classList.add("active");
+        chip.setAttribute("aria-pressed", "true");
+        const filter = chip.dataset.filter;
+        cards.forEach(card => {
+          card.style.display = (filter === "all" || card.dataset.industry === filter)
+            ? "block" : "none";
+        });
+      });
+    });
+  </script>
+</section>
+
+<!-- Tailwind Component Utilities -->
+<style>
+  @layer components {
+    .filter-chip {
+      @apply px-4 py-1.5 text-sm font-semibold rounded-full border border-blue-300 
+             text-slate-600 bg-white hover:bg-blue-600 hover:text-white 
+             transition-all cursor-pointer;
+    }
+    .filter-chip.active {
+      @apply bg-blue-600 text-white border-transparent shadow;
+    }
+
+    .solution-card {
+      @apply bg-white rounded-2xl p-6 flex flex-col gap-3 
+             border border-slate-200 shadow-sm 
+             hover:-translate-y-1 hover:shadow-lg 
+             transition-all duration-200;
+    }
+
+    .solution-icon {
+      @apply w-14 h-14 flex items-center justify-center 
+             rounded-lg bg-blue-50 text-blue-600 text-xl;
+    }
+
+    .solution-title {
+      @apply text-lg font-semibold text-slate-900 flex items-center gap-2;
+    }
+
+    .badge {
+      @apply bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full;
+    }
+
+    .solution-desc {
+      @apply text-slate-600 text-sm;
+    }
+
+    .solution-bullets {
+      @apply list-disc ml-6 text-slate-600 text-sm space-y-1;
+    }
+
+    .solution-actions {
+      @apply mt-auto flex justify-end;
+    }
+
+    .link-cta {
+      @apply text-blue-600 font-semibold hover:underline;
+    }
+  }
+</style>
+
+
+ <!-- ========================================= -->
+<!-- About Section (Tailwind CSS version) -->
+<!-- ========================================= -->
+
+
+<section id="about" class="py-20 bg-gradient-to-b from-white to-slate-50">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-[420px_1fr] gap-10 items-center">
+
+      <!-- Image -->
+      <figure class="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white order-1 md:order-none">
+        <img
+          src="images/vert.about_image.png"
+          alt="SLB Solutions team collaborating on a cloud architecture"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+        />
+      </figure>
+
+      <!-- Content -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-tight">
+          About SLB Solutions
+        </h2>
+
+        <p class="text-slate-600 leading-relaxed">
+          We are a team of engineers, designers, and cloud specialists helping companies accelerate
+          product delivery and run resilient platforms. Founded on engineering excellence and strong
+          delivery practices.
+        </p>
+
+        <ul class="list-disc list-inside text-slate-600 space-y-2">
+          <li>Established process: <span class="font-medium text-slate-800">Discovery → Design → Build → Operate</span></li>
+          <li>Strong emphasis on testing, observability, and security</li>
+          <li>Cross-functional teams with end-to-end ownership</li>
+        </ul>
+
+        <!-- Metrics -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-8 mt-8">
+          <div class="text-center sm:text-left">
+            <strong class="block text-3xl font-bold text-blue-700">19+</strong>
+            <span class="text-slate-500 text-sm">Years combined leadership experience</span>
+          </div>
+          <div class="text-center sm:text-left">
+            <strong class="block text-3xl font-bold text-blue-700">100+</strong>
+            <span class="text-slate-500 text-sm">Projects delivered</span>
+          </div>
+          <div class="text-center sm:text-left">
+            <strong class="block text-3xl font-bold text-blue-700">50%</strong>
+            <span class="text-slate-500 text-sm">Average release cycle reduction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================================= -->
+<!-- Team / Leadership Section (Tailwind CSS) -->
+<!-- ========================================= -->
+<section
+  id="team"
+  class="py-20 bg-gradient-to-b from-slate-100 via-slate-200/50 to-sky-100"
+>
+  <div class="container mx-auto px-6">
+    <!-- Header -->
+    <header class="text-center mb-12 max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800">
+        Leadership
+      </h2>
+      <p class="text-slate-600 mt-3">
+        Experienced leadership focused on delivery, architecture, and client
+        outcomes.
+      </p>
+    </header>
+
+    <!-- Team Grid -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+    >
+      <!-- Team Member 1 -->
+      <article
+        class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+      >
+        <img
+          src="images/ceo.image.png"
+          alt="Jane Doe — CEO"
+          class="w-full h-64 object-cover rounded-t-2xl"
+        />
+        <div class="p-6">
+          <h4 class="text-lg font-semibold text-slate-800">Jane Doe</h4>
+          <p class="text-slate-500 text-sm mt-1">
+            CEO — Strategy & Partnerships
+          </p>
+        </div>
+      </article>
+
+      <!-- Team Member 2 -->
+      <article
+        class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+      >
+        <img
+          src="images/cto.image.png"
+          alt="John Smith — CTO"
+          class="w-full h-64 object-cover rounded-t-2xl"
+        />
+        <div class="p-6">
+          <h4 class="text-lg font-semibold text-slate-800">John Smith</h4>
+          <p class="text-slate-500 text-sm mt-1">
+            CTO — Engineering & Architecture
+          </p>
+        </div>
+      </article>
+
+      <!-- Team Member 3 -->
+      <article
+        class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+      >
+        <img
+          src="images/UXdesigner.image.png"
+          alt="Sara Lee — Head of Design"
+          class="w-full h-64 object-cover rounded-t-2xl"
+        />
+        <div class="p-6">
+          <h4 class="text-lg font-semibold text-slate-800">Sara Lee</h4>
+          <p class="text-slate-500 text-sm mt-1">
+            Head of Design — UX & Product
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= -->
+<!-- Testimonials Section (Tailwind CSS) -->
+<!-- ========================================= -->
+<section
+  id="testimonials"
+  class="py-20 bg-gradient-to-b from-white via-slate-50 to-sky-50"
+>
+  <div class="container mx-auto px-6">
+    <!-- Header -->
+    <header class="text-center mb-12 max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
+        What our clients say
+      </h2>
+      <p class="text-slate-600">
+        Real stories from leaders and teams who’ve accelerated with SLB
+        Solutions.
+      </p>
+    </header>
+
+    <!-- Testimonials Grid -->
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+    >
+      <!-- Testimonial 1 -->
+      <blockquote
+        class="relative bg-white border border-slate-100 shadow-md rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+      >
+        <div class="absolute -top-5 left-6 text-sky-500 text-4xl font-serif">
+          “
+        </div>
+        <p class="text-slate-700 text-lg leading-relaxed mt-4">
+          “SLB Solutions transformed our platform and reduced costs while
+          improving reliability.”
+        </p>
+        <cite
+          class="block mt-4 text-slate-500 font-medium text-sm not-italic"
+          >— CTO, Retail Co.</cite
+        >
+      </blockquote>
+
+      <!-- Testimonial 2 -->
+      <blockquote
+        class="relative bg-white border border-slate-100 shadow-md rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+      >
+        <div class="absolute -top-5 left-6 text-sky-500 text-4xl font-serif">
+          “
+        </div>
+        <p class="text-slate-700 text-lg leading-relaxed mt-4">
+          “At SLB Solutions, we don’t just design interfaces — we craft
+          experiences that align business goals with user needs.”
+        </p>
+        <cite
+          class="block mt-4 text-slate-500 font-medium text-sm not-italic"
+          >— UX Designer</cite
+        >
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================================= -->
+<!-- Contact Section (Tailwind CSS) -->
+<!-- ========================================= -->
+
+<section
+  id="contact"
+  class="relative py-20 bg-gradient-to-b from-slate-100 via-slate-50 to-white border-t border-slate-200"
+>
+  <div class="container mx-auto px-6">
+    <!-- Header -->
+    <header class="text-center mb-12 max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
+        Contact Us
+      </h2>
+      <p class="text-slate-600">
+        Share your project details, and our team will respond promptly to
+        discuss your goals.
+      </p>
+    </header>
+
+    <!-- Contact Grid -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto items-start"
+    >
+      <!-- Contact Form -->
+      <div
+        class="bg-white rounded-2xl shadow-md border border-slate-100 p-8 md:p-10"
+      >
+        <form
+          id="contact-form"
+          action="/api/contact"
+          method="post"
+          novalidate
+          class="space-y-6"
+        >
+          <!-- Full Name -->
+          <div>
+            <label
+              for="name"
+              class="block text-sm font-medium text-slate-700 mb-2"
+              >Full Name <span class="text-red-500">*</span></label
+            >
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <!-- Company -->
+          <div>
+            <label
+              for="company"
+              class="block text-sm font-medium text-slate-700 mb-2"
+              >Company</label
+            >
+            <input
+              id="company"
+              name="company"
+              type="text"
+              class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition"
+              placeholder="Your company (optional)"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-medium text-slate-700 mb-2"
+              >Email <span class="text-red-500">*</span></label
+            >
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label
+              for="phone"
+              class="block text-sm font-medium text-slate-700 mb-2"
+              >Phone</label
+            >
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition"
+              placeholder="+1 (234) 567-890"
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label
+              for="message"
+              class="block text-sm font-medium text-slate-700 mb-2"
+              >Project Brief <span class="text-red-500">*</span></label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition resize-none"
+              placeholder="Tell us about your project..."
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <button
+              type="submit"
+              class="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+            >
+              Send Message
+            </button>
+            <small class="text-slate-600 text-sm">
+              Or email us at
+              <a
+                href="mailto:contact@slbsolutions.com"
+                class="text-sky-600 hover:underline"
+                >contact@slbsolutions.com</a
+              >
+            </small>
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact Details -->
+      <div
+        class="bg-white rounded-2xl shadow-md border border-slate-100 p-8 md:p-10"
+      >
+        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Offices</h3>
+        <address class="not-italic text-slate-600 leading-relaxed mb-6">
+          SLB Solutions<br />
+          Papireddy Palya<br />
+          Bangalore, Karnataka, 500033
+        </address>
+
+        <h4 class="text-lg font-semibold text-slate-800 mt-4">Phone</h4>
+        <p class="text-slate-600 mb-4">
+          <a href="tel:+1234567890" class="hover:text-sky-600 transition"
+            >+1 (234) 567-890</a
+          >
+        </p>
+
+        <h4 class="text-lg font-semibold text-slate-800 mt-4">Email</h4>
+        <p class="text-slate-600 mb-4">
+          <a href="mailto:hello@slbsolutions.com" class="hover:text-sky-600"
+            >contact@slbsolutions.com</a
+          >
+        </p>
+
+        <h4 class="text-lg font-semibold text-slate-800 mt-4 mb-3">Find Us</h4>
+        <div class="rounded-xl overflow-hidden shadow-md">
+          <img
+            src="images/map.image.png"
+            alt="Map of SLB Solutions office location"
+            class="w-full h-56 object-cover"
+          />
+          <!-- Replace with a Google Maps iframe when ready -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= -->
+<!-- Footer (Tailwind CSS) -->
+<!-- ========================================= -->
+<footer
+  class="bg-slate-900 text-slate-300 py-12 md:py-16 border-t border-slate-800"
+  role="contentinfo"
+>
+  <div
+    class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 items-start"
+  >
+    <!-- Brand Section -->
+    <div class="space-y-4">
+      <img
+        src="images/SLB_Logo.png"
+        alt="SLB Solutions logo"
+        class="w-40 brightness-110"
+      />
+      <p class="text-slate-400 text-sm leading-relaxed">
+        Engineering reliable software & cloud platforms that empower businesses
+        to scale with confidence.
+      </p>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav
+      class="md:justify-self-center"
+      aria-label="Footer navigation"
+    >
+      <ul
+        class="flex flex-col sm:flex-row md:flex-col gap-3 text-sm text-slate-400"
+      >
+        <li>
+          <a
+            href="/"
+            class="hover:text-white hover:translate-x-1 transition-all duration-200"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="hover:text-white hover:translate-x-1 transition-all duration-200"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            href="#services"
+            class="hover:text-white hover:translate-x-1 transition-all duration-200"
+            >Services / Solutions</a
+          >
+        </li>
+        <li>
+          <a
+            href="/careers"
+            class="hover:text-white hover:translate-x-1 transition-all duration-200"
+            >Careers</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="hover:text-white hover:translate-x-1 transition-all duration-200"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Legal / Copyright -->
+    <div class="space-y-2 text-sm text-slate-500 md:justify-self-end">
+      <p>
+        &copy; <span id="year" class="text-slate-400"></span> SLB Solutions. All
+        rights reserved.
+      </p>
+      <p>
+        <a
+          href="/privacy"
+          class="hover:text-sky-400 transition-colors duration-200"
+          >Privacy Policy</a
+        >
+        <span class="mx-2 text-slate-600">•</span>
+        <a
+          href="/terms"
+          class="hover:text-sky-400 transition-colors duration-200"
+          >Terms</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Dynamically update copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+
+

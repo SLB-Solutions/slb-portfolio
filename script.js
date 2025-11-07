@@ -1,4 +1,5 @@
 // Minimal JS to set current year and enable nav toggle.
+
         // Move to /assets/js/main.js and expand for better organization.
         document.getElementById('year').textContent = new Date().getFullYear();
 
