@@ -4,200 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>SLB SOLUTION — Home</title>
-    <style>
-        :root{
-            --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
-            --max-width:1100px; --radius:10px;
-        }
-        *{box-sizing:border-box}
-        html,body{height:100%}
-        body{
-            margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background:linear-gradient(180deg,#071226 10%, #071226 60%, #04101a 100%); color:#e6eef6;
-            -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-        }
-
-        /* Header */
-        header{
-            position:fixed; top:0; left:0; right:0;
-            background:linear-gradient(180deg, rgba(7,18,38,0.9), rgba(7,18,38,0.75));
-            backdrop-filter: blur(6px);
-            z-index:60; padding:14px 20px;
-            transition:transform .28s ease, box-shadow .28s ease;
-            box-shadow: 0 6px 18px rgba(2,6,23,0.45);
-        }
-        header.header--hidden{ transform: translateY(-110%); }
-        .nav{
-            max-width:var(--max-width); margin:0 auto; display:flex; gap:16px; align-items:center; justify-content:space-between;
-        }
-        .brand{display:flex; gap:12px; align-items:center; font-weight:700; letter-spacing:0.2px;}
-        .logo{
-            width:60px;
-            height:60px;
-            display:inline-grid;
-            place-items:center;
-            border-radius:8px;
-            overflow:hidden; /* keep image inside rounded box */
-            background:transparent; /* remove accent so image shows */
-        }
-        
-        .logo img{
-            width:100%;
-            height:100%;
-            object-fit:cover; /* scale/crop to fill */
-            display:block;
-        }
-        nav ul{list-style:none; margin:0; padding:0; display:flex; gap:18px; align-items:center;}
-        nav a{color:var(--muted); text-decoration:none; padding:6px 8px; border-radius:10px; font-weight:700;}
-        nav a:hover{color:#95dee9; background:var(--glass);}
-        .cta{background:linear-gradient(90deg,var(--accent),#7dd3fc); color:#022; padding:8px 12px; border-radius:8px; font-weight:700}
-        .mobile-toggle{display:none; background:transparent; border:0; color:var(--muted); font-size:20px}
-
-        /* Hero */
-        .hero{padding:120px 20px 60px; display:flex; justify-content:center}
-        .container{max-width:var(--max-width); margin:0 auto; width:100%}
-        .hero-grid{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center}
-        .hero h1{margin:0 0 12px; font-size:34px; line-height:1.05}
-        .hero p{margin:0 0 18px; color:var(--muted)}
-        .hero .actions{display:flex; gap:12px}
-        .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:25px; border-radius:var(--radius); box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-        .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px}
-        .service{padding:24px; background:transparent; border-radius:8px}
-        .service h4{margin:0 0 6px; font-size:16px}
-        .service p{margin:0; color:var(--muted); font-size:13px}
-
-        /* Portfolio */
-        .portfolio-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:18px}
-        .work{
-            position:relative;
-            height:140px;                 /* adjust as needed */
-            border-radius:10px;
-            overflow:hidden;
-            cursor:pointer;
-            transition:transform .28s ease, box-shadow .28s ease;
-            will-change:transform;
-        }
-        .work img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
-            transition:transform .45s cubic-bezier(.2,.9,.2,1);
-            transform-origin:center center;
-        }
-
-        /* subtle overlay that appears on hover */
-        
-        .work::after{
-            content:"";
-            position:absolute;
-            inset:0;
-            background:linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.32));
-            opacity:0;
-            transition:opacity .28s ease;
-            pointer-events:none;
-        }
-
-        /* caption that fades up on hover (add .caption element inside .work) */
-        .work .caption{
-            position:absolute;
-            left:12px;
-            right:12px;
-            bottom:12px;
-            color:#eaf8fb;
-            font-weight:700;
-            font-size:14px;
-            text-shadow:0 6px 18px rgba(2,6,23,0.6);
-            opacity:0;
-            transform:translateY(8px);
-            transition:opacity .28s ease, transform .28s ease;
-            pointer-events:none;
-        }
-
-        /* make caption always visible when you want text permanently on the image */
-        .work .caption.always{
-            opacity:1;
-            transform:translateY(0);
-            pointer-events:auto;
-            background:linear-gradient(90deg, rgba(0,0,0,0.36), rgba(0,0,0,0.12));
-            padding:8px 12px;
-            display:inline-block;
-            border-radius:8px;
-            max-width:calc(100% - 24px);
-        }
-
-        /* keep hover behaviour working (hover will still scale image / overlay) */
-        .work:hover .caption{ opacity:1; transform:translateY(0); }
-
-        /* hover state */
-        .work:hover{
-            transform:translateY(-6px);
-            box-shadow:0 18px 40px rgba(2,6,23,0.6);
-        }
-        .work:hover img{ transform:scale(1.06); }
-        .work:hover::after{ opacity:1; }
-        .work:hover .caption{ opacity:1; transform:translateY(0); }
-
-        .hero-aside-img{
-            width:100%;
-            height:220px;                 /* adjust to taste */
-            object-fit:cover;             /* crop to fill container */
-            display:block;
-            border-radius:8px;
-            margin-bottom:12px;
-            box-shadow:0 8px 24px rgba(2,6,23,0.45);
-            transition:transform .45s cubic-bezier(.2,.9,.2,1), filter .28s ease, opacity .28s ease;
-            will-change:transform;
-        }
-        .hero-aside-img:hover,
-        .hero-aside-img:focus{
-            transform:scale(1.03);
-            filter:brightness(.96);
-            opacity:0.995;
-        }
-
-        /* responsive heights */
-        @media (min-width:980px){ .portfolio-grid .work{ height:160px; } }
-        @media (max-width:980px){ .hero-aside-img{ height:180px } }
-        @media (max-width:640px){ .hero-aside-img{ height:140px } }
-
-        /* About & Contact */
-        section{padding:28px 0}
-        .two-col{display:grid; grid-template-columns:1fr 340px; gap:24px}
-        .contact-form input, .contact-form textarea{
-            width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit;
-        }
-        .contact-form button{margin-top:8px; padding:10px 12px; background:var(--accent); border:0; border-radius:8px; font-weight:700; color:#022}
-
-        footer{padding:26px 20px; color:var(--muted); border-top:1px solid rgba(255,255,255,0.03); margin-top:40px}
-        .footer-inner{max-width:var(--max-width); margin:0 auto; display:flex; justify-content:space-between; gap:12px; align-items:center}
-        @media (max-width:980px){
-            .hero-grid{grid-template-columns:1fr; gap:18px}
-            .services-grid{grid-template-columns:repeat(2,1fr)}
-            .portfolio-grid{grid-template-columns:repeat(2,1fr)}
-            .two-col{grid-template-columns:1fr}
-        }
-        @media (max-width:640px){
-            nav ul{display:none}
-            .mobile-toggle{display:block}
-            .header-nav-mobile{display:none}
-            .services-grid{grid-template-columns:1fr}
-            .portfolio-grid{grid-template-columns:1fr}
-        }
-        .mobile-menu{position:fixed; inset:60px 12px 12px 12px; background:rgba(3,7,15,0.98); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:12px; z-index:80;}
-        .mobile-menu a{padding:10px; border-radius:8px; color:var(--muted); text-decoration:none}
-        .mobile-menu a:hover{color:#fff; background:var(--glass)}
-
-        /* smooth anchors */
-        html{scroll-behavior:smooth}
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header id="siteHeader" class="">
         <div class="nav">
             <div class="brand">
                 <div class="logo">
-                    <img src="SLB.jpg" alt="SLB SOLUTION logo" />
+                    <img src="images/SLB.jpg" alt="SLB SOLUTION logo" />
                 </div>
                 <div>
                     <!-- <div style="font: size 10px;">SLB SOLUTION</div> -->
@@ -257,7 +71,7 @@
                     </div>
 
                     <aside class="card">
-                        <img class="hero-aside-img" src="office1.jpg" alt="Illustration / product screenshot">
+                        <img class="hero-aside-img" src="images/office1.jpg" alt="Illustration / product screenshot">
                         <h3 style="margin-top:0">Quick facts</h3>
                         <p style="color:var(--muted)">Trusted by teams across industries. Fast delivery, strong UX and measurable outcomes.</p>
                         <ul style="color:var(--muted); margin-top:12px; padding-left:18px">
@@ -285,12 +99,12 @@
             <div class="container">
                 <h2>Selected work</h2>
                 <div class="portfolio-grid">
-                    <div class="work"><img src="office1.jpg" alt="Project A — Enterprise platform"></div>
-                    <div class="work"><img src="office2.jpg" alt="Project B — Mobile app"></div>
-                    <div class="work"><img src="office3.jpg" alt="Project C — Rebrand & website"></div>
-                    <div class="work"><img src="office4.jpg" alt="Project D — Marketplace"></div>
-                    <div class="work"><img src="office5.jpg" alt="Project E — SaaS dashboard"></div>
-                    <div class="work"><img src="office6.jpg" alt="Project F — Marketing site"></div>
+                    <div class="work"><img src="images/office2.jpg" alt="Project B — Mobile app"></div>
+                    <div class="work"><img src="images/office3.jpg" alt="Project C — Rebrand & website"></div>
+                    <div class="work"><img src="images/office4.jpg" alt="Project D — Marketplace"></div>
+                    <div class="work"><img src="images/office5.jpg" alt="Project E — SaaS dashboard"></div>
+                    <div class="work"><img src="images/office6.jpg" alt="Project F — Marketing site"></div>
+                    <div class="work"><img src="images/office1.jpg" alt="Project A — Enterprise platform"></div>
                 </div>
             </div>
         </section>
