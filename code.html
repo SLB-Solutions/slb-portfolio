@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="logo">SLB Solution</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="cta" href="#contact">Get a Quote</a>
+        </div>
+    </header>
+
+    <style>
+    .site-header{
+        background:cadetblue;
+        color:#fff;
+        padding:16px 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    .container{
+        width:90%;
+        max-width:1100px;
+        margin:0 auto;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:12px;
+    }
+    .logo{
+        color:#fff;
+        text-decoration:none;
+        font-weight:700;
+        font-size:1.25rem;
+    }
+    .main-nav{
+        display:flex;
+        gap:14px;
+        align-items:center;
+    }
+    .main-nav a{
+        color:#dbeaf6;
+        text-decoration:none;
+        font-size:0.95rem;
+        padding:6px 8px;
+        border-radius:4px;
+    }
+    .main-nav a:hover{ background:rgba(255,255,255,0.06); }
+    .cta{
+        background:#ffb400;
+        color:#0b1a2b;
+        text-decoration:none;
+        padding:8px 12px;
+        border-radius:6px;
+        font-weight:600;
+    }
+    @media (max-width:720px){
+        .main-nav{ display:none; }
+    }
+    </style>
+    <style>
+        /* Page background (changed from blue to warm coral) */
+        body {
+            background: linear-gradient(180deg, #fff6ee 0%, #ffe8d6 100%);
+            /* fallback solid color */
+            background-color: #fff6ee;
+        }
+    </style>
+    <main id="main" role="main" aria-label="Main content">
+        <div class="container main-intro" style="padding:28px 0;">
+            <nav class="page-index" aria-label="On-page links" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+                <a href="#services" style="color:#0b6b3e;text-decoration:none;font-weight:600;">Services</a>
+                <a href="#about" style="color:#0b6b3e;text-decoration:none;font-weight:600;">About</a>
+                <a href="#contact" style="color:#0b6b3e;text-decoration:none;font-weight:600;">Contact</a>
+                <a href="#projects" style="color:#0b6b3e;text-decoration:none;font-weight:600;">Projects</a>
+            </nav>
+
+            <!-- Alternate UI: visual showcase + compact action sidebar -->
+            <div class="alt-grid" style="display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start;"></div>
+                <section class="showcase" aria-labelledby="showcase-title" style="color:#0b6b3e;"></section>
+                    <h2 id="showcase-title" style="margin:0 0 8px;font-size:1.45rem;">Build faster, ship safer</h2>
+                    <p style="margin:0 0 14px;color:#2a5f49;">SLB Solution helps small teams deliver secure web apps, reliable cloud infrastructure and smooth operational workflows.</p>
+
+                    <!-- Two-image animated stack -->
+                    <div class="showcase-visual" aria-hidden="true" style="margin-bottom:14px;">
+                        <div class="image-stack" style="position:relative;width:100%;max-width:680px;pointer-events:none;">
+                            <img class="stack-img img-main" src="https://via.placeholder.com/640x360?text=Platform+Dashboard" alt="" style="width:100%;border-radius:10px;box-shadow:0 10px 30px rgba(2,10,20,0.14);transform:translateY(0);">
+                            <img class="stack-img img-overlay" src="https://via.placeholder.com/360x220?text=Automation+Pipeline" alt="" style="position:absolute;right:-8%;top:12%;width:46%;border-radius:8px;border:4px solid rgba(255,255,255,0.06);box-shadow:0 12px 26px rgba(2,10,20,0.18);transform:rotate(-6deg);">
+                        </div>
+                    </div>
+
+                    <p style="margin:0 0 12px;">
+                        <a class="cta" href="#projects" style="display:inline-block;padding:9px 14px;background:#0b6b3e;color:#fff;border-radius:7px;text-decoration:none;font-weight:600;margin-right:10px;">See projects</a>
+                        <a class="cta" href="#services" style="display:inline-block;padding:9px 14px;background:transparent;color:#0b6b3e;border-radius:7px;border:1px solid rgba(11,107,62,0.12);text-decoration:none;font-weight:600;">Explore services</a>
+                    </p>
+                </section>
+
+                <aside class="quick-actions" aria-labelledby="quick-actions-title" style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(2,10,20,0.06);">
+                    <h3 id="quick-actions-title" style="margin:0 0 10px;color:#0b6b3e;">Quick actions</h3>
+
+                    <ul style="list-style:none;padding:0;margin:0 0 12px;display:grid;gap:10px;">
+                        <li>
+                            <a href="#services" style="display:flex;gap:10px;align-items:center;padding:8px;border-radius:8px;text-decoration:none;color:#0b6b3e;background:linear-gradient(180deg,#f8fff7,#fff);"></a>
+                                <span aria-hidden="true" style="font-size:1.2rem;">⚙️</span>
+                                <span><strong style="display:block;">View services</strong><small style="color:#466;">Consulting, Dev & Cloud</small></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" style="display:flex;gap:10px;align-items:center;padding:8px;border-radius:8px;text-decoration:none;color:#0b6b3e;background:linear-gradient(180deg,#f8fff7,#fff);"></a>
+                                <span aria-hidden="true" style="font-size:1.2rem;">👥</span>
+                                <span><strong style="display:block;">About us</strong><small style="color:#466;">Who we are & how we work</small></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" style="display:flex;gap:10px;align-items:center;padding:8px;border-radius:8px;text-decoration:none;color:#0b6b3e;background:linear-gradient(180deg,#f8fff7,#fff);"></a>
+                                <span aria-hidden="true" style="font-size:1.2rem;">✉️</span>
+                                <span><strong style="display:block;">Get in touch</strong><small style="color:#466;">Request a quote or call</small></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="mini-contact" style="border-top:1px solid rgba(3,12,20,0.04);padding-top:12px;">
+                        <strong style="display:block;margin-bottom:6px;color:#0b6b3e;">Request a callback</strong>
+                        <form action="#" method="post" style="display:grid;gap:8px;">
+                            <input name="name" type="text" placeholder="Your name" required style="padding:8px;border-radius:8px;border:1px solid rgba(3,12,20,0.06);">
+                            <input name="phone" type="tel" placeholder="Phone or email" required style="padding:8px;border-radius:8px;border:1px solid rgba(3,12,20,0.06);">
+                            <button type="submit" class="cta" style="padding:9px;border-radius:8px;background:#ffb400;border:none;color:#052033;font-weight:700;">Request</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+
+            <style>
+                /* Subtle animations for the alternate UI */
+                @keyframes stackFloat {
+                    0% { transform:translateY(0); }
+                    50% { transform:translateY(-6px); }
+                    100% { transform:translateY(0); }
+                }
+                .image-stack .img-main { animation:stackFloat 5s ease-in-out infinite; will-change:transform; }
+                .image-stack .img-overlay { animation:stackFloat 6s ease-in-out infinite; will-change:transform; }
+                /* small responsive tweaks */
+                @media (max-width:880px) {
+                    .alt-grid { grid-template-columns:1fr; }
+                    .image-stack .img-overlay { position:relative; right:auto; top:auto; width:60%; margin:-14px auto 0; transform:rotate(-2deg); }
+                }
+                /* Respect user motion preference */
+                @media (prefers-reduced-motion: reduce) {
+                    .image-stack .img-main, .image-stack .img-overlay { animation:none; }
+                }
+            </style>
+        </div></a>
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content"></div>
+                    <h1>SLB Solution — Reliable IT & Business Services</h1>
+                    <p>We design, build and maintain web and cloud solutions that help small businesses grow.</p>
+                    <a class="cta" href="#contact">Get a Quote</a>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <!-- Two visual images with simple animations -->
+                    <div class="visual-grid">
+                        <figure class="visual-card animate-slide-in-left">
+                            <img src="https://via.placeholder.com/320x200?text=Solution+1" alt="Illustration of solution one">
+                            <figcaption>Modern Web Apps</figcaption>
+                        </figure>
+
+                        <figure class="visual-card animate-slide-in-right">
+                            <img src="https://via.placeholder.com/320x200?text=Solution+2" alt="Illustration of solution two">
+                            <figcaption>Cloud & DevOps</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <article class="service">
+                    <h3>Consulting</h3>
+                    <p>Strategy, planning and process improvement to align technology with business goals.</p>
+                </article>
+                <article class="service">
+                    <h3>Web & App Development</h3>
+                    <p>Fast, accessible websites and web apps built with modern best practices.</p>
+                </article>
+                <article class="service">
+                    <h3>Cloud & DevOps</h3>
+                    <p>Reliable deployments, monitoring and scalable infrastructure on demand.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="projects container">
+            <h2>Selected Projects</h2>
+            <div class="project-grid">
+                <figure class="project animate-fade-up">
+                    <img src="https://via.placeholder.com/300x160?text=Project+1" alt="Screenshot of project 1">
+                    <figcaption>Inventory Dashboard — Analytics & Reporting</figcaption>
+                </figure>
+                <figure class="project animate-fade-up" style="animation-delay:120ms;">
+                    <img src="https://via.placeholder.com/300x160?text=Project+2" alt="Screenshot of project 2">
+                    <figcaption>Customer Portal — Secure Account Management</figcaption>
+                </figure>
+                <figure class="project animate-fade-up" style="animation-delay:240ms;">
+                    <img src="https://via.placeholder.com/300x160?text=Project+3" alt="Screenshot of project 3">
+                    <figcaption>Automation Pipeline — Faster Releases</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="about" class="about container">
+            <h2>About SLB Solution</h2>
+            <p>We are a small team focused on delivering practical software and cloud solutions with clear communication and predictable delivery.</p>
+        </section>
+
+        <section id="contact" class="contact container">
+            <h2>Contact</h2>
+            <p>Ready to start? Send a message or request a quote.</p>
+            <form action="#" method="post" class="contact-form" aria-label="Contact form">
+                <label>
+                    <span class="sr-only">Name</span>
+                    <input type="text" name="name" placeholder="Your name" required>
+                </label>
+                <label>
+                    <span class="sr-only">Email</span>
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                </label>
+                <label>
+                    <span class="sr-only">Message</span>
+                    <textarea name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+                </label>
+                <button type="submit" class="cta">Send Message</button>
+            </form>
+        </section>
+
+        <style>
+            /* Hero layout tweaks */
+            .hero { padding:48px 0; background:linear-gradient(180deg,#595f64 0,#5e7386 100%); color:#fff; }
+            .hero-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+            .hero-content { max-width:560px; }
+            .hero h1 { margin:0 0 8px; font-size:1.6rem; }
+            .hero p { margin:0 0 12px; color:rgba(255,255,255,0.95); }
+
+            /* Visual grid with two images */
+            .visual-grid { display:flex; gap:14px; align-items:center; }
+            .visual-card { width:320px; background:linear-gradient(180deg,#657b87,#7d96ad); border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(2,10,20,0.25); color:#fff; text-align:center; transform-origin:center; }
+            .visual-card img { width:100%; height:auto; display:block; filter:contrast(1.02) saturate(1.05); }
+            .visual-card figcaption { padding:10px 12px; font-weight:600; font-size:0.95rem; background:linear-gradient(180deg,rgba(0,0,0,0.06),transparent); }
+
+            /* Projects */
+            .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:12px; }
+            .project { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(3,12,20,0.06); transition:transform 250ms ease, box-shadow 250ms ease; }
+            .project img { width:100%; height:auto; display:block; }
+            .project figcaption { padding:10px; font-size:0.9rem; color:#5f696d; }
+
+            .project:hover { transform:translateY(-6px) scale(1.01); box-shadow:0 12px 28px rgba(3,12,20,0.12); }
+
+            /* Animations */
+            @keyframes float {
+                0% { transform:translateY(0); }
+                50% { transform:translateY(-8px); }
+                100% { transform:translateY(0); }
+            }
+            @keyframes slideInLeft {
+                from { opacity:0; transform:translateX(-20px) scale(0.98); }
+                to { opacity:1; transform:translateX(0) scale(1); }
+            }
+            @keyframes slideInRight {
+                from { opacity:0; transform:translateX(20px) scale(0.98); }
+                to { opacity:1; transform:translateX(0) scale(1); }
+            }
+            @keyframes fadeUp {
+                from { opacity:0; transform:translateY(10px); }
+                to { opacity:1; transform:translateY(0); }
+            }
+
+            .visual-card { animation:float 4s ease-in-out infinite; }
+            .animate-slide-in-left { animation:slideInLeft 600ms cubic-bezier(.2,.9,.2,1) both; }
+            .animate-slide-in-right { animation:slideInRight 600ms cubic-bezier(.2,.9,.2,1) both; }
+            .animate-fade-up { animation:fadeUp 480ms ease both; }
+
+            /* Respect prefers-reduced-motion */
+            @media (prefers-reduced-motion: reduce) {
+                .visual-card, .animate-slide-in-left, .animate-slide-in-right, .animate-fade-up { animation:none; }
+            }
+
+            /* Responsive */
+            @media (max-width:920px) {
+                .visual-grid { flex-direction:column; width:100%; align-items:center; }
+                .visual-card { width:86%; max-width:360px; }
+            }
+            @media (max-width:720px){
+                .hero-inner { flex-direction:column; text-align:center; }
+                .hero-visual { order:-1; }
+                .container { width:94%; }
+            }
+
+            /* Minor accessibility helpers (kept from original) */
+            .sr-only { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+        </style>
+    </main>
+    <footer class="site-footer" role="contentinfo" aria-label="Footer" style="background:#083b4a;">
+        <!-- Bank details removed -->
+        <div class="container footer-grid" style="display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 0;color:#fff;flex-wrap:wrap;">
+            <div class="brand" style="display:flex;flex-direction:column;min-width:180px;">
+                <a href="#" class="logo" style="color:#fff;text-decoration:none;font-weight:700;font-size:1.1rem;">SLB Solution</a>
+                <small style="opacity:0.9;margin-top:6px;">Reliable IT & Business Services</small>
+            </div>
+
+            <div class="quick-links" style="min-width:160px;">
+                <strong style="display:block;margin-bottom:8px;color:#dbeaf6;">Quick links</strong>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:6px;"></ul>
+                    <li><a href="#home" style="color:#dbeaf6;text-decoration:none;">Home</a></li>
+                    <li><a href="#services" style="color:#dbeaf6;text-decoration:none;">Services</a></li>
+                    <li><a href="#projects" style="color:#dbeaf6;text-decoration:none;">Projects</a></li>
+                    <li><a href="#about" style="color:#dbeaf6;text-decoration:none;">About</a></li>
+                    <li><a href="#contact" style="color:#dbeaf6;text-decoration:none;">Contact</a></li>
+                </ul>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation" style="display:flex;gap:10px;align-items:center;min-width:160px;">
+                <a href="#services" style="color:#dbeaf6;text-decoration:none;">Services</a>
+                <a href="#projects" style="color:#dbeaf6;text-decoration:none;">Projects</a>
+                <a href="#about" style="color:#dbeaf6;text-decoration:none;">About</a>
+            </nav>
+
+            <div class="social" style="display:flex;gap:10px;align-items:center;min-width:140px;">
+                <a href="#" aria-label="Twitter" style="color:#dbeaf6;text-decoration:none;">Twitter</a>
+                <a href="#" aria-label="LinkedIn" style="color:#dbeaf6;text-decoration:none;">LinkedIn</a>
+                <a href="#" aria-label="GitHub" style="color:#dbeaf6;text-decoration:none;">GitHub</a>
+            </div>
+        </div>
+
+        <div class="container" style="border-top:1px solid rgba(255,255,255,0.06);padding:12px 0;color:rgba(255,255,255,0.9);font-size:0.9rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+                <small>© 2025 SLB Solution. All rights reserved.</small>
+                <small><a href="#" style="color:#dbeaf6;text-decoration:none;">Privacy</a> · <a href="#" style="color:#dbeaf6;text-decoration:none;">Terms</a></small>
+            </div>
+        </div>
+
+        <style>
+            .site-footer { background:#0b3a66; }
+            .footer-grid { align-items:center; }
+            @media (max-width:720px){
+                .footer-grid { flex-direction:column; align-items:flex-start; gap:12px; }
+                .footer-nav { order:4; }
+                .social { order:3; }
+                .quick-links { order:2; }
+            }
+        </style>
+    </footer>
+</body>
+</html>
