@@ -1,0 +1,12 @@
+{
+  "name": "slb-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./css/tailwind.css -o ./css/tailwind.build.css --minify",
+    "watch:css": "npx tailwindcss -i ./css/tailwind.css -o ./css/tailwind.build.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.5.0"
+  }
+}

@@ -18,3 +18,39 @@ Small edits you might want
 If you want, I can:
 - Wire a simple lightbox script and navigation.
 - Add a small admin HTML to generate galleries from a list of filenames.
+Tailwind CSS (optional)
+-----------------------
+If you'd like to use Tailwind CSS in this project I added a small starter config and input file. Files added:
+
+- `tailwind.config.js` — Tailwind configuration (content paths + brand color).
+- `css/tailwind.css` — Tailwind input file with `@tailwind` directives and a couple of sample components.
+- `package.json` — includes convenience scripts to build/watch the Tailwind CSS.
+
+Quick build steps (from the project root):
+
+1. Install dev dependencies:
+
+```powershell
+npm install
+```
+
+2. Build the CSS once:
+
+```powershell
+npm run build:css
+```
+
+3. Or during development run the watcher:
+
+```powershell
+npm run watch:css
+```
+
+After building, include the generated file `css/tailwind.build.css` in your HTML files (for example, add a link in the head):
+
+```html
+<link rel="stylesheet" href="css/tailwind.build.css">
+```
+
+If you'd like, I can wire Tailwind utility classes into one of the example pages (for instance the grid header), or build the CSS now and add the compiled file to the repo. Tell me which option you prefer.
+

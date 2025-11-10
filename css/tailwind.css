@@ -1,0 +1,17 @@
+/* Tailwind input file — run the Tailwind CLI to compile this into a build CSS file.
+   Example build command: npx tailwindcss -i ./css/tailwind.css -o ./css/tailwind.build.css --minify
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small project-level components using Tailwind's @apply */
+@layer components {
+  .btn-brand {
+    @apply inline-block bg-brand text-white px-4 py-2 rounded-md shadow-sm;
+  }
+  .card-soft {
+    @apply bg-white rounded-lg overflow-hidden shadow;
+  }
+}
