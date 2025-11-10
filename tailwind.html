@@ -100,7 +100,7 @@
     <!-- Hero Media -->
     <div class="flex-1 flex justify-center lg:justify-end">
       <img 
-        src="images/Hero.image.png" 
+        src="images/hero.image(generated).png" 
         alt="Transforming businesses with modern software and cloud technologies"
         class="w-full max-w-md md:max-w-lg lg:max-w-xl object-contain animate-float"
         loading="lazy"
@@ -248,31 +248,30 @@
 
 
 <!-- ========================================= -->
-<!-- Solutions / Industries Section (Tailwind) -->
+<!-- Solutions / Industries Section (Upgraded Tailwind + JS) -->
 <!-- ========================================= -->
 
-<section id="solutions" class="py-16 bg-gradient-to-b from-blue-50/10 via-white to-transparent">
-  <div class="max-w-7xl mx-auto px-6">
-    
+<section id="solutions" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-blue-50 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.15),transparent_60%)]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 z-10">
+
     <!-- Header -->
-    <header class="grid md:grid-cols-2 gap-6 items-center mb-10">
-      
-      <!-- Intro -->
-      <div class="max-w-2xl">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
-          Strategic and Secure Solutions for Growth.
+    <header class="grid md:grid-cols-2 gap-8 items-center mb-14">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          Strategic and Secure Solutions for Growth
         </h2>
-        <p class="text-slate-600">
-          We build industry-focused platforms that reduce risk, accelerate delivery, 
-          and drive measurable business value.
+        <p class="mt-3 text-slate-600 text-lg">
+          Empowering industries with secure, scalable, and performance-driven digital platforms.
         </p>
       </div>
-      
-      <!-- Controls -->
-      <div class="flex flex-col md:items-end gap-2">
-        <span class="text-sm font-medium text-slate-500">Explore by industry</span>
-        <div class="flex flex-wrap gap-2 justify-start md:justify-end" role="toolbar">
-          <button class="filter-chip active" data-filter="all" aria-pressed="true">All</button>
+
+      <!-- Filter Chips -->
+      <div class="flex flex-col md:items-end gap-3">
+        <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide">Explore by Industry</span>
+        <div class="flex flex-wrap gap-3 justify-start md:justify-end" role="toolbar">
+          <button class="filter-chip active" data-filter="all">All</button>
           <button class="filter-chip" data-filter="finance">Finance</button>
           <button class="filter-chip" data-filter="healthcare">Healthcare</button>
           <button class="filter-chip" data-filter="retail">Retail</button>
@@ -282,162 +281,180 @@
     </header>
 
     <!-- Solutions Grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+    <div id="solutionsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
 
-      <!-- Card 1: Finance -->
-      <article class="solution-card" data-industry="finance" role="listitem" tabindex="0">
-        <div class="flex gap-4 items-start">
-          <div class="solution-icon"><i class="fa fa-chart-line"></i></div>
+      <!-- Card Template Example -->
+      <article class="solution-card" data-industry="finance">
+        <div class="flex items-start gap-4">
+          <div class="solution-icon bg-blue-100 text-blue-600">
+            <i class="fa fa-chart-line"></i>
+          </div>
           <div>
-            <h3 class="solution-title">Financial Services Platforms <span class="badge">Compliance</span></h3>
+            <h3 class="solution-title">Financial Services Platforms 
+              <span class="badge bg-blue-200 text-blue-700">Compliance</span>
+            </h3>
             <p class="solution-desc">
-              Secure, low-latency systems with auditability, reconciliation, and risk controls for regulated environments.
+              Secure, low-latency systems with auditability and risk controls for regulated environments.
             </p>
           </div>
         </div>
         <ul class="solution-bullets">
           <li>Real-time payments & reconciliation</li>
-          <li>PCI / SOC / audit readiness</li>
-          <li>High-throughput event-driven architecture</li>
+          <li>Audit-ready architecture</li>
+          <li>High-throughput systems</li>
         </ul>
-        <div class="solution-actions">
-          <a href="#contact" class="link-cta">Talk to an expert →</a>
-        </div>
+        <a href="#contact" class="link-cta">Talk to an expert →</a>
       </article>
 
-      <!-- Card 2: Healthcare -->
-      <article class="solution-card" data-industry="healthcare" role="listitem" tabindex="0">
-        <div class="flex gap-4 items-start">
-          <div class="solution-icon"><i class="fa fa-hospital"></i></div>
+      <article class="solution-card" data-industry="healthcare">
+        <div class="flex items-start gap-4">
+          <div class="solution-icon bg-green-100 text-green-600">
+            <i class="fa fa-hospital"></i>
+          </div>
           <div>
-            <h3 class="solution-title">Healthcare & Patient Experience <span class="badge">HIPAA</span></h3>
+            <h3 class="solution-title">Healthcare & Patient Experience 
+              <span class="badge bg-green-200 text-green-700">HIPAA</span>
+            </h3>
             <p class="solution-desc">
-              Interoperable platforms that protect patient data, support telehealth, and simplify clinical workflows.
+              Interoperable platforms that secure patient data and improve telehealth efficiency.
             </p>
           </div>
         </div>
         <ul class="solution-bullets">
-          <li>Secure data exchange & FHIR integrations</li>
-          <li>Access controls and consent management</li>
-          <li>Resilient hosting with observability</li>
+          <li>FHIR integrations</li>
+          <li>Consent management</li>
+          <li>Observability & compliance</li>
         </ul>
-        <div class="solution-actions">
-          <a href="#contact" class="link-cta">Schedule a consultation →</a>
-        </div>
+        <a href="#contact" class="link-cta">Schedule a consultation →</a>
       </article>
 
-      <!-- Card 3: Retail -->
-      <article class="solution-card" data-industry="retail" role="listitem" tabindex="0">
-        <div class="flex gap-4 items-start">
-          <div class="solution-icon"><i class="fa fa-store"></i></div>
+      <article class="solution-card" data-industry="retail">
+        <div class="flex items-start gap-4">
+          <div class="solution-icon bg-pink-100 text-pink-600">
+            <i class="fa fa-store"></i>
+          </div>
           <div>
-            <h3 class="solution-title">Retail & eCommerce <span class="badge">Omnichannel</span></h3>
+            <h3 class="solution-title">Retail & eCommerce 
+              <span class="badge bg-pink-200 text-pink-700">Omnichannel</span>
+            </h3>
             <p class="solution-desc">
-              Scalable storefronts and headless commerce to deliver personalized experiences across channels.
+              Personalized, headless, and data-driven storefronts for modern customer experiences.
             </p>
           </div>
         </div>
         <ul class="solution-bullets">
-          <li>Headless CMS & composable commerce</li>
-          <li>Personalization & analytics</li>
-          <li>Inventory & order orchestration</li>
+          <li>Composable commerce</li>
+          <li>Analytics & personalization</li>
+          <li>Inventory orchestration</li>
         </ul>
-        <div class="solution-actions">
-          <a href="#contact" class="link-cta">Start a project →</a>
-        </div>
+        <a href="#contact" class="link-cta">Start a project →</a>
       </article>
 
-      <!-- Card 4: SaaS -->
-      <article class="solution-card" data-industry="saas" role="listitem" tabindex="0">
-        <div class="flex gap-4 items-start">
-          <div class="solution-icon"><i class="fa fa-cloud-arrow-up"></i></div>
+      <article class="solution-card" data-industry="saas">
+        <div class="flex items-start gap-4">
+          <div class="solution-icon bg-indigo-100 text-indigo-600">
+            <i class="fa fa-cloud-arrow-up"></i>
+          </div>
           <div>
-            <h3 class="solution-title">Enterprise SaaS & Platforms <span class="badge">Scalable</span></h3>
+            <h3 class="solution-title">Enterprise SaaS & Platforms 
+              <span class="badge bg-indigo-200 text-indigo-700">Scalable</span>
+            </h3>
             <p class="solution-desc">
-              Multi-tenant architectures, billing, telemetry, and secure onboarding to scale product-led businesses.
+              Multi-tenant architecture, telemetry, and billing built for product-led growth.
             </p>
           </div>
         </div>
-        <div class="solution-actions mt-4">
-          <a href="#contact" class="link-cta">Discuss architecture →</a>
-        </div>
+        <ul class="solution-bullets">
+          <li>Multi-tenant design</li>
+          <li>Subscription & billing automation</li>
+          <li>Secure CI/CD pipelines</li>
+        </ul>
+        <a href="#contact" class="link-cta">Discuss architecture →</a>
       </article>
 
     </div>
   </div>
 
-  <!-- Filter Script -->
-  <script>
-    const chips = document.querySelectorAll(".filter-chip");
-    const cards = document.querySelectorAll(".solution-card");
+  <!-- Filtering Script -->
+<script>
 
-    chips.forEach(chip => {
-      chip.addEventListener("click", () => {
-        chips.forEach(c => {
-          c.classList.remove("active");
-          c.setAttribute("aria-pressed", "false");
-        });
-        chip.classList.add("active");
-        chip.setAttribute("aria-pressed", "true");
-        const filter = chip.dataset.filter;
-        cards.forEach(card => {
-          card.style.display = (filter === "all" || card.dataset.industry === filter)
-            ? "block" : "none";
-        });
+{
+  const chips = document.querySelectorAll(".filter-chip");
+  const cards = document.querySelectorAll(".solution-card");
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      chips.forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      const filter = chip.dataset.filter;
+
+      cards.forEach(card => {
+        const matches = filter === "all" || card.dataset.industry === filter;
+        card.classList.toggle("hidden", !matches);
+
+        if (matches) {
+          card.classList.add("animate-fadeIn");
+        }
       });
     });
-  </script>
+  });
+}
+</script>
+
+
+  <!-- Tailwind Component Styles -->
+  <style>
+    @layer components {
+      .filter-chip {
+        @apply px-4 py-1.5 text-sm font-semibold rounded-full border border-slate-300
+               text-slate-700 bg-white hover:bg-blue-600 hover:text-white transition-all
+               cursor-pointer shadow-sm;
+      }
+      .filter-chip.active {
+        @apply bg-blue-600 text-white border-transparent shadow-md scale-105;
+      }
+
+      .solution-card {
+        @apply bg-white/80 backdrop-blur-lg rounded-2xl p-6 border border-slate-200 
+               shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300
+               flex flex-col gap-3 animate-fadeIn;
+      }
+
+      .solution-icon {
+        @apply w-14 h-14 flex items-center justify-center rounded-xl text-2xl font-bold;
+      }
+
+      .solution-title {
+        @apply text-lg font-semibold text-slate-900 flex items-center gap-2;
+      }
+
+      .badge {
+        @apply text-xs font-semibold px-2 py-0.5 rounded-full;
+      }
+
+      .solution-desc {
+        @apply text-slate-600 text-sm mt-1;
+      }
+
+      .solution-bullets {
+        @apply list-disc ml-6 text-slate-600 text-sm space-y-1;
+      }
+
+      .link-cta {
+        @apply mt-auto text-blue-600 font-semibold hover:underline hover:text-blue-700 transition;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.4s ease-in-out;
+      }
+    }
+  </style>
 </section>
 
-<!-- Tailwind Component Utilities -->
-<style>
-  @layer components {
-    .filter-chip {
-      @apply px-4 py-1.5 text-sm font-semibold rounded-full border border-blue-300 
-             text-slate-600 bg-white hover:bg-blue-600 hover:text-white 
-             transition-all cursor-pointer;
-    }
-    .filter-chip.active {
-      @apply bg-blue-600 text-white border-transparent shadow;
-    }
-
-    .solution-card {
-      @apply bg-white rounded-2xl p-6 flex flex-col gap-3 
-             border border-slate-200 shadow-sm 
-             hover:-translate-y-1 hover:shadow-lg 
-             transition-all duration-200;
-    }
-
-    .solution-icon {
-      @apply w-14 h-14 flex items-center justify-center 
-             rounded-lg bg-blue-50 text-blue-600 text-xl;
-    }
-
-    .solution-title {
-      @apply text-lg font-semibold text-slate-900 flex items-center gap-2;
-    }
-
-    .badge {
-      @apply bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full;
-    }
-
-    .solution-desc {
-      @apply text-slate-600 text-sm;
-    }
-
-    .solution-bullets {
-      @apply list-disc ml-6 text-slate-600 text-sm space-y-1;
-    }
-
-    .solution-actions {
-      @apply mt-auto flex justify-end;
-    }
-
-    .link-cta {
-      @apply text-blue-600 font-semibold hover:underline;
-    }
-  }
-</style>
 
 
  <!-- ========================================= -->
@@ -902,11 +919,48 @@
       </p>
     </div>
   </div>
-
+            <!--===================================-->
+                      <!--JAVASCRIPT-->
+            <!--===================================-->
   <script>
     // Dynamically update copyright year
+
+
     document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    module.exports = {
+  darkMode: 'class', // enables class-based dark mode
+  content: ['./**/*.html'],
+  theme: { extend: {} },
+  plugins: [],
+};
+  
+<!-- Filtering Script -->
+</script>
+<script>
+   // <!-- Filtering Script of SERVICES SECTION -->
+{
+  const chips = document.querySelectorAll(".filter-chip");
+  const cards = document.querySelectorAll(".solution-card");
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      chips.forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      const filter = chip.dataset.filter;
+
+      cards.forEach(card => {
+        const matches = filter === "all" || card.dataset.industry === filter;
+        card.classList.toggle("hidden", !matches);
+
+        if (matches) {
+          card.classList.add("animate-fadeIn");
+        }
+      });
+    });
+  });
+}
+</script>
+
 </footer>
 
 
